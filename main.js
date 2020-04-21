@@ -30,5 +30,4 @@ router.get("/productDetailview.html", (req, res) => {
     customReadFile("views/productDetailview.html", res);
 });
 http.createServer(router.handle).listen(3000);
-console.log(`The server is listening on port number:
-➥ ${port}`);
+console.log(`The server is listening on port number: ${port}`);
