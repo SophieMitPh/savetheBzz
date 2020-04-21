@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="28ceb59c-4a59-4388-a2ab-23fafd4ab66e" name="Default Changelist" comment="Initialization" />
+    <list id="5ec8a3d6-6751-43d8-a2c1-0e93a3358751" name="Revert &quot;Initialization&quot;" comment="Revert &quot;Initialization&quot;&#10;&#10;This reverts commit 4f8a6541">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aqen4hXZEy29qV6OcKY4Pv1Ep1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28ceb59c-4a59-4388-a2ab-23fafd4ab66e" name="Default Changelist" comment="" />
+      <created>1587467714752</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587467714752</updated>
+      <workItem from="1587467716846" duration="588000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initialization">
+      <created>1587467857266</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587467857266</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initialization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialization" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="319" y="88" key="#Project_Structure" timestamp="1587467720595">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="319" y="88" key="#Project_Structure/0.23.1440.801@0.23.1440.801" timestamp="1587467720595" />
+    <state x="313" y="23" key="CommitChangelistDialog2" timestamp="1587468386234">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="313" y="23" key="CommitChangelistDialog2/0.23.1440.801@0.23.1440.801" timestamp="1587468386234" />
+  </component>
+</project>

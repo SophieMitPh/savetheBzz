@@ -1,0 +1,19 @@
+{
+  "name": "savethebzz",
+  "version": "1.0.0",
+  "description": "Online shop based on node.js",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SophieMitPh/savetheBzz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SophieMitPh/savetheBzz/issues"
+  },
+  "homepage": "https://github.com/SophieMitPh/savetheBzz#readme"
+}
