@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/SophieMitPh/savetheBzz/issues"
   },
-  "homepage": "https://github.com/SophieMitPh/savetheBzz#readme"
+  "homepage": "https://github.com/SophieMitPh/savetheBzz#readme",
+  "dependencies": {
+    "http-status-codes": "^1.4.0"
+  }
 }
