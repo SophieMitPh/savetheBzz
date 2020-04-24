@@ -1,0 +1,47 @@
+.products{
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    background: #F1EDED;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#productTitle{
+    display: flex;
+    flex-direction: row;
+    font-family: Rock Salt, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+    align-self: center;
+}
+
+.product-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.imgBorder{
+    display: flex;
+    flex-direction: row;
+    background: #FDF8F8;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+.product-image{
+    width: 143px;
+    height: 117px;
+    margin: 25px;
+}
+
+.imgBorder .wishlistIcon{
+    width: 42px;
+    height: 37px;
+    margin: 10px;
+}

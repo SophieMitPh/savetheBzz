@@ -1,5 +1,6 @@
 .header-rectangle{
     background: #ECEE81;
+    margin-top: 0;
 }
 
 .header-elements{
@@ -12,6 +13,14 @@
     flex-flow: row wrap;
 }
 
+#headerTitle{
+    font-family: Rock Salt, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+    align-self: center;
+}
+
 #logo{
     width: 101px;
     height: 83px;
@@ -20,18 +29,11 @@
     margin-left: 16px;
 }
 
-h1{
-    font-family: Rock Salt, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: #000000;
-    align-self: center;
-}
-
 .logos {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-right: 20px;
 }
 
 #account{
