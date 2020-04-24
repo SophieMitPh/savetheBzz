@@ -1,0 +1,54 @@
+.header-rectangle{
+    background: #ECEE81;
+}
+
+.header-elements{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headline {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#logo{
+    width: 101px;
+    height: 83px;
+    align-self: center;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+h1{
+    font-family: Rock Salt, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+    align-self: center;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#account{
+    width: 51px;
+    height: 52px;
+    align-self: center;
+}
+
+#wishList{
+    width: 58px;
+    height: 57px;
+    margin-left: 10px;
+    align-self: center;
+}
+
+#cart{
+    width: 65px;
+    height: 58px;
+    align-self: center;
+}
