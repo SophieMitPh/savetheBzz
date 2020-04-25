@@ -1,4 +1,4 @@
-.products{
+.main{
     display: flex;
     flex-direction: column;
     bottom: 0;
@@ -8,7 +8,7 @@
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#productTitle{
+.productTitle{
     display: flex;
     flex-direction: row;
     font-family: Rock Salt, sans-serif;
@@ -16,4 +16,46 @@
     font-weight: normal;
     color: #000000;
     align-self: center;
+}
+
+.detailView {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.imgBorder{
+    background: #FDF8F8;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    flex-basis: auto;
+}
+
+.product-image{
+    width: 320px;
+    height: 320px;
+    margin: 20px;
+}
+
+.description-container {
+    width: 25%;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    margin: 20px;
+}
+
+.add-button {
+    width: 311px;
+    height: 78px;
+    background: #F6FA41;
+    margin-top: 30px;
+    align-self: flex-end;
 }
