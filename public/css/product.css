@@ -28,7 +28,8 @@
 
 .imgBorder{
     background: #FDF8F8;
-    border: 1px solid #000000;
+    border: 3px solid #cfc4c4;
+    border-radius: 5px;
     box-sizing: border-box;
     margin: 20px;
     padding: 20px;

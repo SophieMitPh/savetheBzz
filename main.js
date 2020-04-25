@@ -7,7 +7,7 @@ const port = 3000,
 
 router.get("/", (req, res) => {
     res.writeHead(httpStatusCodes.OK, contentTypes.plaintxt);
-    res.end("Got to /productOverview.html or /productDetailview.html for more");
+    res.end("Got to /productOverview.html or /productDetailView.html for more");
 });
 router.get("/productOverview.html", (req, res) => {
     res.writeHead(httpStatusCodes.OK, contentTypes.html);
@@ -35,7 +35,7 @@ router.get("/nopicture.png", (req, res) => {
 });
 router.get("/wishlist.png", (req, res) => {
     res.writeHead(httpStatusCodes.OK, contentTypes.png);
-    utils.getFile("public/images/wishList.png", res)
+    utils.getFile("public/images/wishlist.png", res)
 });
 router.get("/header.css", (req, res) => {
     res.writeHead(httpStatusCodes.OK, contentTypes.css);
