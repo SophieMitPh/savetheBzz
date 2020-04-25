@@ -9,7 +9,7 @@ module.exports = {
                 res.writeHead(httpStatus.INTERNAL_SERVER_ERROR, contentTypes.html)
                 res.end("Internal server error.")
             }
-            res.data(data)
+            res.end(data)
         })
     }
 }
