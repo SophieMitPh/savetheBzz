@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28ceb59c-4a59-4388-a2ab-23fafd4ab66e" name="Default Changelist" comment="added css">
-      <change afterPath="$PROJECT_DIR$/controllers/homeController.js" afterDir="false" />
+    <list default="true" id="28ceb59c-4a59-4388-a2ab-23fafd4ab66e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/productDetailView.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/productDetailView.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/productOverview.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/productOverview.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/productDetailView.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/productDetailView.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/productOverview.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/productOverview.ejs" afterDir="false" />
     </list>
     <list id="5ec8a3d6-6751-43d8-a2c1-0e93a3358751" name="Revert &quot;Initialization&quot;" comment="Revert &quot;Initialization&quot;&#10;&#10;This reverts commit 4f8a6541" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +80,7 @@
       <workItem from="1587804297697" duration="5589000" />
       <workItem from="1587918348739" duration="80000" />
       <workItem from="1588072518971" duration="2658000" />
-      <workItem from="1588075205514" duration="1858000" />
+      <workItem from="1588075205514" duration="3706000" />
     </task>
     <task id="LOCAL-00001" summary="Initialization">
       <created>1587467857266</created>
@@ -129,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587809162540</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="setup express">
+      <created>1588082556251</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588082556251</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +156,8 @@
     <MESSAGE value="added newline at end of file" />
     <MESSAGE value="linting" />
     <MESSAGE value="added css" />
-    <option name="LAST_COMMIT_MESSAGE" value="added css" />
+    <MESSAGE value="setup express" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup express" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="87" key="#Notifications" timestamp="1587712290033">
@@ -169,10 +172,10 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="408" y="164" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.797@0.23.1440.797" timestamp="1587712118527" />
-    <state x="313" y="23" key="CommitChangelistDialog2" timestamp="1588082529869">
+    <state x="313" y="23" key="CommitChangelistDialog2" timestamp="1588082556004">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state x="313" y="23" key="CommitChangelistDialog2/0.23.1440.797@0.23.1440.797" timestamp="1588082529869" />
+    <state x="313" y="23" key="CommitChangelistDialog2/0.23.1440.797@0.23.1440.797" timestamp="1588082556004" />
     <state x="313" y="23" key="CommitChangelistDialog2/0.23.1440.801@0.23.1440.801" timestamp="1587468468858" />
     <state x="0" y="23" width="1440" height="797" key="DiffContextDialog" timestamp="1588082521731">
       <screen x="0" y="23" width="1440" height="797" />
