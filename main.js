@@ -10,7 +10,7 @@ app.use(layouts);
 app.use(express.static('public'));
 
 app.get("/", (req, res) => {
-    res.send("Go to /productOverview.ejs or /productDetailView.ejs for more");
+    res.send("Go to /product/:product or /products for more");
 });
 
 app.use((req, res, next) => {
