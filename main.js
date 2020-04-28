@@ -3,9 +3,10 @@ const port = 3000,
     app = express();
 
 const homeController = require('./controllers/homeController');
+const layouts = require("express-ejs-layouts");
 
 app.set("view engine", "ejs");
-
+app.use(layouts);
 app.use(express.static('public'));
 
 app.get("/", (req, res) => {
@@ -23,3 +24,4 @@ app.listen(port, () => {
 
 app.get("/products", homeController.getProductOverview);
 app.get("/product/:product", homeController.getProductDetailView);
+
