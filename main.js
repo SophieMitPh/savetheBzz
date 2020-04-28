@@ -21,5 +21,5 @@ app.listen(port, () => {
     console.log(`The express server has started on port ${port}`);
 });
 
-app.get("/productOverview.ejs", homeController.getProductOverview);
-app.get("/productDetailView.ejs", homeController.getProductDetailView);
+app.get("/products", homeController.getProductOverview);
+app.get("/product/:product", homeController.getProductDetailView);

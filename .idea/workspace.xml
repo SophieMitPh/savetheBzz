@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="28ceb59c-4a59-4388-a2ab-23fafd4ab66e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/homeController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/productDetailView.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/productDetailView.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/productOverview.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/productOverview.ejs" afterDir="false" />
     </list>
     <list id="5ec8a3d6-6751-43d8-a2c1-0e93a3358751" name="Revert &quot;Initialization&quot;" comment="Revert &quot;Initialization&quot;&#10;&#10;This reverts commit 4f8a6541" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,13 +24,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="$PROJECT_DIR$/.idea" />
-      </set>
-    </option>
-  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -41,7 +34,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -80,7 +72,8 @@
       <workItem from="1587804297697" duration="5589000" />
       <workItem from="1587918348739" duration="80000" />
       <workItem from="1588072518971" duration="2658000" />
-      <workItem from="1588075205514" duration="3706000" />
+      <workItem from="1588075205514" duration="4416000" />
+      <workItem from="1588089013939" duration="2409000" />
     </task>
     <task id="LOCAL-00001" summary="Initialization">
       <created>1587467857266</created>
@@ -131,24 +124,30 @@
       <option name="project" value="LOCAL" />
       <updated>1588082556251</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added assets to display images and css">
+      <created>1588084306622</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588084306622</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialization" />
@@ -157,7 +156,8 @@
     <MESSAGE value="linting" />
     <MESSAGE value="added css" />
     <MESSAGE value="setup express" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup express" />
+    <MESSAGE value="added assets to display images and css" />
+    <option name="LAST_COMMIT_MESSAGE" value="added assets to display images and css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="87" key="#Notifications" timestamp="1587712290033">
@@ -168,14 +168,14 @@
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="319" y="88" key="#Project_Structure/0.23.1440.801@0.23.1440.801" timestamp="1587467720595" />
-    <state x="408" y="164" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1587712118527">
+    <state x="408" y="164" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588088902429">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state x="408" y="164" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.797@0.23.1440.797" timestamp="1587712118527" />
-    <state x="313" y="23" key="CommitChangelistDialog2" timestamp="1588082556004">
+    <state x="408" y="164" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.797@0.23.1440.797" timestamp="1588088902429" />
+    <state x="313" y="23" key="CommitChangelistDialog2" timestamp="1588084306442">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state x="313" y="23" key="CommitChangelistDialog2/0.23.1440.797@0.23.1440.797" timestamp="1588082556004" />
+    <state x="313" y="23" key="CommitChangelistDialog2/0.23.1440.797@0.23.1440.797" timestamp="1588084306442" />
     <state x="313" y="23" key="CommitChangelistDialog2/0.23.1440.801@0.23.1440.801" timestamp="1587468468858" />
     <state x="0" y="23" width="1440" height="797" key="DiffContextDialog" timestamp="1588082521731">
       <screen x="0" y="23" width="1440" height="797" />

@@ -3,6 +3,7 @@ exports.getProductOverview = (req, res) => {
 };
 
 exports.getProductDetailView = (req, res) => {
-    res.render("productDetailView");
+    let paramsName = req.params.product;
+    res.render("productDetailView", { product: paramsName });
 };
 
