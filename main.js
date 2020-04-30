@@ -17,10 +17,24 @@ router.get("/productDetailView.html", (req, res) => {
     res.writeHead(httpStatusCodes.OK, contentTypes.html);
     utils.getFile("views/productDetailView.html", res);
 });
+router.get("/cart.html", (req, res) => {
+    res.writeHead(httpStatusCodes.OK, contentTypes.html);
+    utils.getFile("views/cart.html", res);
+})
+
+
 router.get("/cart.png", (req, res) => {
     res.writeHead(httpStatusCodes.OK, contentTypes.png);
     utils.getFile("public/images/cart.png", res)
 });
+router.get("/trash.png", (req, res) => {
+    res.writeHead(httpStatusCodes.OK, contentTypes.png);
+    utils.getFile("public/images/trash.png", res)
+});
+router.get("/expandedlist.png", (req, res) => {
+    res.writeHead(httpStatusCodes.OK, contentTypes.png);
+    utils.getFile("public/images/expandedlist.png", res)
+})
 router.get("/logo.png", (req, res) => {
     res.writeHead(httpStatusCodes.OK, contentTypes.png);
     utils.getFile("public/images/logo.png", res)
@@ -48,6 +62,10 @@ router.get("/products.css", (req, res) => {
 router.get("/product.css", (req, res) => {
     res.writeHead(httpStatusCodes.OK, contentTypes.css);
     utils.getFile("public/css/product.css", res)
+});
+router.get("/cart.css", (req, res) => {
+    res.writeHead(httpStatusCodes.OK, contentTypes.css);
+    utils.getFile("public/css/cart.css", res)
 });
 http.createServer(router.handle).listen(3000);
 console.log(`The server is listening on port number: ${port}`);
