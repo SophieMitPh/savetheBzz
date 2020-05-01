@@ -22,6 +22,7 @@ app.get("/signUp", homeController.getSignUp);
 app.post("/contact", homeController.showSignUp);
 app.get("/products", homeController.getProductOverview);
 app.get("/product/:product", homeController.getProductDetailView);
+app.get("/cart", homeController.getCartView);
 
 app.use((req, res, next) => {
     console.log(`request made to: ${req.url}`);
