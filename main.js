@@ -6,13 +6,20 @@ const homeController = require('./controllers/homeController');
 const errorController = require('./controllers/errorController');
 const layouts = require("express-ejs-layouts");
 
+app.use(
+    express.urlencoded({
+        extended: false
+    })
+);
+app.use(express.json());
+
 app.set("view engine", "ejs");
 app.use(layouts);
 app.use(express.static('public'));
 
-app.get("/", (req, res) => {
-    res.send("Go to /product/:product or /products for more");
-});
+app.get("/", homeController.getIndexPage);
+app.get("/signUp", homeController.getSignUp);
+app.post("/contact", homeController.showSignUp);
 app.get("/products", homeController.getProductOverview);
 app.get("/product/:product", homeController.getProductDetailView);
 

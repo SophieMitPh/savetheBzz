@@ -39,6 +39,7 @@
 #account{
     width: 51px;
     height: 52px;
+    margin-top: 12px;
     align-self: center;
 }
 
@@ -46,11 +47,13 @@
     width: 58px;
     height: 57px;
     margin-left: 10px;
+    margin-top: 10px;
     align-self: center;
 }
 
 #cart{
     width: 65px;
     height: 58px;
+    margin-top: 10px;
     align-self: center;
 }

@@ -15,30 +15,15 @@
             <h1>Products</h1>
         </div>
         <div class="product-grid">
-            <div class="imgBorder">
-                <a href="/productDetailView.html"><img class="product-image" src="images/nopicture.png"></a>
+            <% productNames.forEach( productTitle =>  { %>
+            <div>
+                <h2> <%= productTitle.title %></h2>
+                <div class="imgBorder">
+                <a href="/product/<%= productTitle.title %>"><img class="product-image" src="images/<%= productTitle.title %>.png"></a>
                 <a href="/pathToAddToWishlist"><img class="wishlistIcon" src="images/wishlist.png"></a>
             </div>
-            <div class="imgBorder">
-                <a href="/productDetailView.html"><img class="product-image" src="images/nopicture.png"></a>
-                <a href="/pathToAddToWishlist"><img class="wishlistIcon" src="images/wishlist.png"></a>
             </div>
-            <div class="imgBorder">
-                <a href="/productDetailView.html"><img class="product-image" src="images/nopicture.png"></a>
-                <a href="/pathToAddToWishlist"><img class="wishlistIcon" src="images/wishlist.png"></a>
-            </div>
-            <div class="imgBorder">
-                <a href="/productDetailView.html"><img class="product-image" src="images/nopicture.png"></a>
-                <a href="/pathToAddToWishlist"><img class="wishlistIcon" src="images/wishlist.png"></a>
-            </div>
-            <div class="imgBorder">
-                <a href="/productDetailView.html"><img class="product-image" src="images/nopicture.png"></a>
-                <a href="/pathToAddToWishlist"><img class="wishlistIcon" src="images/wishlist.png"></a>
-            </div>
-            <div class="imgBorder">
-                <a href="/productDetailView.html"><img class="product-image" src="images/nopicture.png"></a>
-                <a href="/pathToAddToWishlist"><img class="wishlistIcon" src="images/wishlist.png"></a>
-            </div>
+            <% }); %>
         </div>
     </div>
 </body>
