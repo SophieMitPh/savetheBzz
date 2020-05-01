@@ -4,33 +4,20 @@
 <head>
     <meta charset="utf-8">
     <title>Product detailed view</title>
-    <link rel="stylesheet" type="text/css" href="/header.css">
-    <link rel="stylesheet" type="text/css" href="/product.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/product.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock+Salt" />
     <link href="//fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
 </head>
 
 <body>
-    <div class="header-rectangle">
-        <div class="header-elements">
-            <div class="headline">
-                <img id="logo" src="/logo.png" />
-                <h1 id="headerTitle">Save the Bzz!</h1>
-            </div>
-            <div class="logos">
-                <img id="account" src="/account.png" />
-                <img id="wishList" src="/wishlist.png" />
-                <img id="cart" src="/cart.png" />
-            </div>
-        </div>
-    </div>
     <div class="main">
         <div class="productTitle">
-            <h1>Product</h1>
+            <h1><%= product %></h1>
         </div>
         <div class="detailView">
         <div class="imgBorder">
-                <img class="product-image" src="/nopicture.png">
+                <img class="product-image" src="/images/nopicture.png">
         </div>
         <div class="description-container">
                 <h2>Product info</h2>

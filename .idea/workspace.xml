@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="28ceb59c-4a59-4388-a2ab-23fafd4ab66e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/homeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/productDetailView.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/productDetailView.ejs" afterDir="false" />
+    </list>
+    <list id="5ec8a3d6-6751-43d8-a2c1-0e93a3358751" name="Revert &quot;Initialization&quot;" comment="Revert &quot;Initialization&quot;&#10;&#10;This reverts commit 4f8a6541" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1aqen4hXZEy29qV6OcKY4Pv1Ep1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.10.0" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28ceb59c-4a59-4388-a2ab-23fafd4ab66e" name="Default Changelist" comment="" />
+      <created>1587467714752</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587467714752</updated>
+      <workItem from="1587467716846" duration="6352000" />
+      <workItem from="1587485016817" duration="1283000" />
+      <workItem from="1587712104189" duration="28000" />
+      <workItem from="1587712165626" duration="125000" />
+      <workItem from="1587804297697" duration="5589000" />
+      <workItem from="1587918348739" duration="80000" />
+      <workItem from="1588072518971" duration="2658000" />
+      <workItem from="1588075205514" duration="4416000" />
+      <workItem from="1588089013939" duration="2409000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initialization">
+      <created>1587467857266</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587467857266</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initialization">
+      <created>1587468469004</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587468469004</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Routing Setup">
+      <created>1587483702179</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587483702179</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added newline at end of file">
+      <created>1587483948924</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587483948924</updated>
+    </task>
+    <task id="LOCAL-00005" summary="linting">
+      <created>1587485084015</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587485084015</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added css">
+      <created>1587809162540</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1587809162540</updated>
+    </task>
+    <task id="LOCAL-00007" summary="setup express">
+      <created>1588082556251</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588082556251</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added assets to display images and css">
+      <created>1588084306622</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588084306622</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initialization" />
+    <MESSAGE value="Routing Setup" />
+    <MESSAGE value="added newline at end of file" />
+    <MESSAGE value="linting" />
+    <MESSAGE value="added css" />
+    <MESSAGE value="setup express" />
+    <MESSAGE value="added assets to display images and css" />
+    <option name="LAST_COMMIT_MESSAGE" value="added assets to display images and css" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="87" key="#Notifications" timestamp="1587712290033">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="320" y="87" key="#Notifications/0.23.1440.797@0.23.1440.797" timestamp="1587712290033" />
+    <state x="319" y="88" key="#Project_Structure" timestamp="1587467720595">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="319" y="88" key="#Project_Structure/0.23.1440.801@0.23.1440.801" timestamp="1587467720595" />
+    <state x="408" y="164" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588088902429">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="408" y="164" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.797@0.23.1440.797" timestamp="1588088902429" />
+    <state x="313" y="23" key="CommitChangelistDialog2" timestamp="1588084306442">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="313" y="23" key="CommitChangelistDialog2/0.23.1440.797@0.23.1440.797" timestamp="1588084306442" />
+    <state x="313" y="23" key="CommitChangelistDialog2/0.23.1440.801@0.23.1440.801" timestamp="1587468468858" />
+    <state x="0" y="23" width="1440" height="797" key="DiffContextDialog" timestamp="1588082521731">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="0" y="23" width="1440" height="797" key="DiffContextDialog/0.23.1440.797@0.23.1440.797" timestamp="1588082521731" />
+    <state x="657" y="139" key="RollbackChangesDialog" timestamp="1588073127726">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="657" y="139" key="RollbackChangesDialog/0.23.1440.797@0.23.1440.797" timestamp="1588073127726" />
+    <state x="228" y="60" key="SettingsEditor" timestamp="1587712273291">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="228" y="60" key="SettingsEditor/0.23.1440.797@0.23.1440.797" timestamp="1587712273291" />
+    <state x="605" y="178" width="667" height="486" key="find.popup" timestamp="1588074545711">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="605" y="178" width="667" height="486" key="find.popup/0.23.1440.797@0.23.1440.797" timestamp="1588074545711" />
+  </component>
+</project>
