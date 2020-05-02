@@ -5,6 +5,29 @@ const port = 3000,
 const homeController = require('./controllers/homeController');
 const errorController = require('./controllers/errorController');
 const layouts = require("express-ejs-layouts");
+const mongoose = require("mongoose");
+mongoose.connect(
+    "mongodb://localhost:27017/save-the-bzz",
+    { useNewUrlParser: true }
+);
+const db = mongoose.connection;
+db.once("open", () => {
+    console.log("Successfully connected to MongoDB using Mongoose!");
+});
+const subscriberSchema = mongoose.Schema({
+    name: String,
+    lastname: String,
+    email: String,
+    password: String
+})
+const productSchema = mongoose.Schema({
+    name: String,
+    price: Number,
+    description: String
+})
+const Subscriber = mongoose.model("Subscriber", subscriberSchema)
+const Product = mongoose.model("Product", productSchema)
+
 
 app.use(
     express.urlencoded({
@@ -31,6 +54,27 @@ app.use((req, res, next) => {
 app.use(errorController.logErrors);
 app.use(errorController.respondInternalError);
 app.use(errorController.respondNoResourceFound);
+
+var subscriber1 = new Subscriber({
+    name: "Jon",
+    lastname: "Wexler",
+    email: "jon@jonwexler.com",
+    password: "12345"
+});
+subscriber1.save((error, savedDocument) => {
+    if (error) console.log(error);
+    console.log(savedDocument);
+});
+var product1 = new Product({
+    name: "Skirt",
+    price: "55",
+    description: "100% silk blue skirt"
+});
+product1.save((error, savedDocument) => {
+    if (error) console.log(error);
+    console.log(savedDocument);
+});
+
 
 app.listen(port, () => {
     console.log(`The express server has started on port ${port}`);
