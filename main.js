@@ -4,6 +4,7 @@ const port = 3000,
 
 const homeController = require('./controllers/homeController');
 const errorController = require('./controllers/errorController');
+const subscribersController = require('./controllers/subscribersController');
 const layouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 
@@ -32,6 +33,9 @@ app.post("/contact", homeController.showSignUp);
 app.get("/products", homeController.getProductOverview);
 app.get("/product/:product", homeController.getProductDetailView);
 app.get("/cart", homeController.getCartView);
+app.get("/subscribers", subscribersController.getAllSubscribers, (req, res, next) => {
+    res.render("subscribers", { subscribers: req.data });
+});
 
 app.use((req, res, next) => {
     console.log(`request made to: ${req.url}`);
@@ -41,6 +45,8 @@ app.use(errorController.logErrors);
 app.use(errorController.respondInternalError);
 app.use(errorController.respondNoResourceFound);
 
+const Subscriber = require("./models/subscriber");
+const Product = require("./models/product");
 var subscriber1 = new Subscriber({
     name: "Jon",
     lastname: "Wexler",
