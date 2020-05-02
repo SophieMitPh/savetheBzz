@@ -32,25 +32,22 @@
 .logos {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    align-self: center;
+
+    justify-content: space-between;
     margin-right: 20px;
 }
 
 #account{
-    width: 51px;
-    height: 52px;
     align-self: center;
 }
 
 #wishList{
-    width: 58px;
-    height: 57px;
     margin-left: 10px;
     align-self: center;
 }
 
 #cart{
-    width: 65px;
-    height: 58px;
     align-self: center;
+    height: 60px;
 }

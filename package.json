@@ -4,6 +4,7 @@
   "description": "Online shop based on node.js",
   "main": "main.js",
   "scripts": {
+    "start": "nodemon main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,12 @@
   },
   "homepage": "https://github.com/SophieMitPh/savetheBzz#readme",
   "dependencies": {
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
     "http-status-codes": "^1.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }
