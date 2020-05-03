@@ -2,15 +2,6 @@ exports.getIndexPage = (req, res) => {
     res.render("index")
 };
 
-exports.getSignUp = (req, res) => {
-    res.render("signUp")
-};
-
-exports.showSignUp = (req, res) => {
-    let signUpData = req.body
-    res.render("contact", { name: signUpData.name, email: signUpData.email })
-};
-
 var productTitles = [
     {
         title: "Jeans",

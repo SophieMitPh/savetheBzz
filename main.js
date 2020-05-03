@@ -28,8 +28,8 @@ app.use(layouts);
 app.use(express.static('public'));
 
 app.get("/", homeController.getIndexPage);
-app.get("/signUp", homeController.getSignUp);
-app.post("/contact", homeController.showSignUp);
+app.get("/signUp", subscribersController.getSignUp);
+app.post("/contact", subscribersController.showSignUp);
 app.get("/products", homeController.getProductOverview);
 app.get("/product/:product", homeController.getProductDetailView);
 app.get("/cart", homeController.getCartView);
@@ -47,16 +47,7 @@ app.use(errorController.respondNoResourceFound);
 
 const Subscriber = require("./models/subscriber");
 const Product = require("./models/product");
-var subscriber1 = new Subscriber({
-    name: "Jon",
-    lastname: "Wexler",
-    email: "jon@jonwexler.com",
-    password: "12345"
-});
-subscriber1.save((error, savedDocument) => {
-    if (error) console.log(error);
-    console.log(savedDocument);
-});
+
 var product1 = new Product({
     name: "Skirt",
     price: "55",

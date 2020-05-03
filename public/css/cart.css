@@ -84,6 +84,7 @@ body {
 
 select {
     padding: 10px;
+    margin-top: 10px;
     border-radius: 5px;
     border: none;
     background-color: #FDF8F8;

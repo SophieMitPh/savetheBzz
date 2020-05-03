@@ -8,3 +8,21 @@ exports.getAllSubscribers = (req, res, next) => {
         next();
     });
 };
+
+exports.getSignUp = (req, res) => {
+    res.render("signUp")
+};
+
+exports.showSignUp = (req, res) => {
+    let signUpData = req.body
+    let newSubscriber = new Subscriber({
+        name: req.body.name,
+        lastname: req.body.lastname,
+        email: req.body.email
+    });
+    newSubscriber.save((error, result) => {
+        if(error) res.send(error);
+        res.render("contact", { name: signUpData.name, lastname: signUpData.lastname, email: signUpData.email });
+    })
+    
+};
