@@ -7,6 +7,7 @@ const errorController = require('./controllers/errorController');
 const subscribersController = require('./controllers/subscribersController');
 const layouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
 
 mongoose.connect(
     "mongodb://localhost:27017/save-the-bzz",
@@ -44,19 +45,6 @@ app.use((req, res, next) => {
 app.use(errorController.logErrors);
 app.use(errorController.respondInternalError);
 app.use(errorController.respondNoResourceFound);
-
-const Subscriber = require("./models/subscriber");
-const Product = require("./models/product");
-
-var product1 = new Product({
-    name: "Skirt",
-    price: "55",
-    description: "100% silk blue skirt"
-});
-product1.save((error, savedDocument) => {
-    if (error) console.log(error);
-    console.log(savedDocument);
-});
 
 app.listen(port, () => {
     console.log(`The express server has started on port ${port}`);
