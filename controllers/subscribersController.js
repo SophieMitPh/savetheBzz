@@ -2,11 +2,18 @@ const mongoose = require("mongoose"),
     Subscriber = require("../models/subscriber");
 
 exports.getAllSubscribers = (req, res, next) => {
-    Subscriber.find({}, (error, subscribers) => {
-        if (error) next(error);
-        req.data = subscribers;
-        next();
-    });
+    Subscriber.find({})
+    .exec()
+    .then ((subscribers) => {
+        res.render("subscribers", {
+            subscribers: subscribers
+        });
+    }).catch((error) => {
+        console.log(error.message);
+        return [];
+    }).then(() => {
+        console.log("Promise complete")
+    }); 
 };
 
 exports.getSignUp = (req, res) => {
@@ -20,9 +27,9 @@ exports.showSignUp = (req, res) => {
         lastname: req.body.lastname,
         email: req.body.email
     });
-    newSubscriber.save((error, result) => {
-        if(error) res.send(error);
+    newSubscriber.save().then((result) => {
         res.render("contact", { name: signUpData.name, lastname: signUpData.lastname, email: signUpData.email });
+    }).catch(error => {
+        res.send(error);
     })
-    
 };
