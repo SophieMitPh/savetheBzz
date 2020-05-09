@@ -40,7 +40,9 @@ exports.saveProduct = (req, res, next) => {
 
     newProduct.save((error, result) => {
         if (error) res.send(error);
-        let product = req.body.name;
-        res.render("productDetailView", { product: product });
+        let productName = req.body.name;
+        let productDescription = req.body.description;
+        let productPrice = req.body.price;
+        res.render("productDetailView", { productName: productName, description: productDescription, price: productPrice });
     })
 };
