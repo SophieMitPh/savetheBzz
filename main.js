@@ -5,6 +5,8 @@ const port = 3000,
 const homeController = require('./controllers/homeController');
 const errorController = require('./controllers/errorController');
 const subscribersController = require('./controllers/subscribersController');
+const productController = require('./controllers/productController');
+
 const layouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
@@ -31,9 +33,11 @@ app.use(express.static('public'));
 app.get("/", homeController.getIndexPage);
 app.get("/signUp", subscribersController.getSignUp);
 app.post("/contact", subscribersController.showSignUp);
-app.get("/products", homeController.getProductOverview);
+app.get("/products", productController.getAllProducts);
 app.get("/product/:product", homeController.getProductDetailView);
 app.get("/cart", homeController.getCartView);
+app.get("/addProduct", productController.getAddProductView);
+app.post("/newProduct", productController.saveProduct);
 app.get("/subscribers", subscribersController.getAllSubscribers, (req, res, next) => {
     res.render("subscribers", { subscribers: req.data });
 });
