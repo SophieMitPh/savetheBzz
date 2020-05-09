@@ -39,7 +39,9 @@
 }
 
 #account{
+    margin-top: 3px;
     align-self: center;
+    height: 50px;
 }
 
 #wishList{
@@ -49,5 +51,6 @@
 
 #cart{
     align-self: center;
-    height: 60px;
+    height: 66px;
+    width: 68px;
 }

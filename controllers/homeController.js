@@ -11,3 +11,6 @@ exports.getCartView = (req, res) => {
     res.render("cart");
 }
 
+exports.getWishList = (req, res) => {
+    res.render("wishList")
+}
