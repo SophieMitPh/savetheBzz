@@ -13,17 +13,16 @@
 <body>
     <div class="main">
         <div class="productTitle">
-            <h1><%= product %></h1>
+            <h1><%= productName %></h1>
         </div>
         <div class="detailView">
         <div class="imgBorder">
-                <img class="product-image" src="/images/<%= product%>.png">
+                <img class="product-image" src="/images/<%= productName%>.png">
         </div>
         <div class="description-container">
                 <h2>Product info</h2>
-                <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat".</p>
+                <p><%= description %></p>
+                <h3>Price: <%= price %> €</h3>
                 <button class="add-button">ADD TO BAG</button>
         </div>
         </div>

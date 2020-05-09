@@ -5,6 +5,13 @@ exports.newProduct = (req, res) => {
     res.send(req.data.name);
 };
 
+exports.getProductDetailView = (req, res) => {
+    let paramsName = req.params.productName;
+    Product.findOne({ name: paramsName }).exec().then((p) => {
+        res.render("productDetailView", { productName: paramsName, description: p.description, price: p.price });
+    })
+};
+
 exports.getAddProductView = (req, res) => {
     res.render("addProduct");
 };

@@ -34,7 +34,7 @@ app.get("/", homeController.getIndexPage);
 app.get("/signUp", subscribersController.getSignUp);
 app.post("/contact", subscribersController.showSignUp);
 app.get("/products", productController.getAllProducts);
-app.get("/product/:product", homeController.getProductDetailView);
+app.get("/product/:productName", productController.getProductDetailView);
 app.get("/cart", homeController.getCartView);
 app.get("/addProduct", productController.getAddProductView);
 app.post("/newProduct", productController.saveProduct);
