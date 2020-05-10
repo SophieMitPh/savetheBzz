@@ -11,7 +11,7 @@ const layouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 
-mongoose.connect(
+mongoose.connect(process.env.MONGODB_URI ||
     "mongodb://localhost:27017/save-the-bzz",
     { useNewUrlParser: true }
 );
@@ -51,6 +51,7 @@ app.use(errorController.logErrors);
 app.use(errorController.respondInternalError);
 app.use(errorController.respondNoResourceFound);
 
-app.listen(port, () => {
-    console.log(`The express server has started on port ${port}`);
+app.set("port", process.env.PORT || 3000);
+const server = app.listen(app.get("port"), () => {
+    console.log(`Server running at http://localhost: ${app.get("port")}`);
 });
