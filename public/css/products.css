@@ -1,11 +1,18 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: #F1EDED;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
 .products{
     display: flex;
     flex-direction: column;
     bottom: 0;
-    background: #F1EDED;
-    border: 1px solid #FFFFFF;
     box-sizing: border-box;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .productTitle{
