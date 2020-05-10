@@ -12,9 +12,9 @@ const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 
 mongoose.connect(process.env.MONGODB_URI ||
-    "mongodb://localhost:27017/save-the-bzz",
+    "mongodb://127.0.0.1:27017/save-the-bzz",
     { useNewUrlParser: true }
-);
+).catch(error => console.log("Could not connect to mongo db " + error));
 const db = mongoose.connection;
 db.once("open", () => {
     console.log("Successfully connected to MongoDB using Mongoose!");
