@@ -36,6 +36,7 @@ app.post("/contact", subscribersController.showSignUp);
 app.get("/products", productController.getAllProducts);
 app.get("/product/:productName", productController.getProductDetailView);
 app.get("/cart", homeController.getCartView);
+app.get("/wishlist", homeController.getWishList);
 app.get("/addProduct", productController.getAddProductView);
 app.post("/newProduct", productController.saveProduct);
 app.get("/subscribers", subscribersController.getAllSubscribers, (req, res, next) => {
