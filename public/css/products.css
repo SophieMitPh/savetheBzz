@@ -44,6 +44,11 @@ body {
     box-sizing: border-box;
     margin: 30px;
     padding: 10px;
+    transition: transform .2s; /* Animation */
+}
+
+.imgBorder:hover{
+    transform: scale(1.15);
 }
 
 .product-image{
