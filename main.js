@@ -6,7 +6,6 @@ const homeController = require('./controllers/homeController');
 const errorController = require('./controllers/errorController');
 const subscribersController = require('./controllers/subscribersController');
 const productController = require('./controllers/productController');
-
 const layouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
