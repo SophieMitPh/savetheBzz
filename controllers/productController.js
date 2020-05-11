@@ -20,7 +20,7 @@ exports.getAllProducts = (req, res, next) => {
     Product.find({})
     .exec()
             .then ((products) => {
-                res.render("productOverView", {
+                res.render("productOverview", {
                     products: products
                 });
             }).catch((error) => {
