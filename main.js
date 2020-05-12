@@ -1,6 +1,7 @@
 const port = 3000,
     express = require('express'),
-    app = express();
+    app = express(),
+    morgan = require("morgan");
 
 const homeController = require('./controllers/homeController');
 const errorController = require('./controllers/errorController');
@@ -28,6 +29,7 @@ app.use(express.json());
 app.set("view engine", "ejs");
 app.use(layouts);
 app.use(express.static('public'));
+app.use(morgan("combined"))
 
 app.get("/", homeController.getIndexPage);
 app.get("/signUp", subscribersController.getSignUp);
