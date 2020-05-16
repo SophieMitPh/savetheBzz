@@ -9,7 +9,9 @@ on:
       - master
       - 'saveTheBzz/**'
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
+      - 'saveTheBzz/**'
 
 jobs:
   build:
