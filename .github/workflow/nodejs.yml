@@ -7,11 +7,11 @@ on:
   push:
     branches: 
       - master
-      - 'saveTheBzz/**'
+      - '**'
   pull_request:
     branches:
       - master
-      - 'saveTheBzz/**'
+      - '**'
 
 jobs:
   build:
