@@ -2,7 +2,7 @@ process.env.NODE_ENV = "test"
 const Product = require('../models/product')
 const Subscriber = require('../models/subscriber')
 const request = require('supertest')
-const app = require('../main')
+const app = require('../app')
 const mongoose = require('mongoose')
 
 const mongodbURI = process.env.MONGO_URL_USE_TEST || process.env.MONGO_URL
@@ -23,7 +23,6 @@ afterAll(async () => {
   await mongoose.connection.close()
   console.log('+++++ afterAll DB Close')
 })
-
 module.exports = {
   Product: Product,
   Subscriber: Subscriber,

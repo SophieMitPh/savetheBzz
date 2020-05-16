@@ -3,7 +3,7 @@ describe('productController', () => {
     let productItems
     beforeEach(async () => {
         productItems = await Promise.all([
-           Product.create({name: "Cotton T-shirt", price: 25, description: "100% cotton T-shirt"}),
+           Product.create({name: "shirt", price: 25, description: "100% cotton T-shirt"}),
            Product.create({name: "Silk blouse", price: 60, description: "Beige silk blouse"}),
            Product.create({name: "Leather skirt", price: 59, description: "faux leather skirt"})   
         ])
