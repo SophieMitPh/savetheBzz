@@ -1,9 +1,9 @@
-const { app, Product, request } = require("../../commonJest");
+const { app, Product, request } = require('../../commonJest');
 
-describe("Product Index", function () {
+describe('Product Index', function () {
 	const productData = {
-		name: "Jeans",
-		description: "Some awesome Jeans",
+		name: 'Jeans',
+		description: 'Some awesome Jeans',
 		price: 55,
 	};
 	let productProps;
@@ -14,15 +14,15 @@ describe("Product Index", function () {
 				done();
 			})
 			.catch(error => {
-				console.log("error caught: " + error.message);
+				console.log('error caught: ' + error.message);
 				done(error.message);
 			});
 	});
-	it("renders product detail page correctly", async (done) => {
+	it('renders product detail page correctly', async (done) => {
 
-		console.log("__________________" + productData.name + "__________________________");
+		console.log('__________________' + productData.name + '__________________________');
 		request(app)
-			.get("/product/Jeans")
+			.get('/product/Jeans')
 			.then((response) => {
 				expect(response.text).toMatchSnapshot();
 				done();

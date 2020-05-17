@@ -1,16 +1,16 @@
 exports.getIndexPage = (req, res) => {
-    res.render("index")
+	res.render('index');
 };
 
 exports.getProductDetailView = (req, res) => {
-    let paramsName = req.params.product;
-    res.render("productDetailView", { product: paramsName });
+	let paramsName = req.params.product;
+	res.render('productDetailView', { product: paramsName });
 };
 
 exports.getCartView = (req, res) => {
-    res.render("cart");
-}
+	res.render('cart');
+};
 
 exports.getWishList = (req, res) => {
-    res.render("wishList")
-}
+	res.render('wishList');
+};
