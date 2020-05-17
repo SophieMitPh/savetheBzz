@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
-    "test": "jest --maxWorkers=1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
