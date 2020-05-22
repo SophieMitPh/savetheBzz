@@ -21,6 +21,7 @@ app.use(layouts);
 app.use(express.static('public'));
 app.get('/', homeController.getIndexPage);
 app.get('/users', usersController.index, usersController.indexView);
+app.get('/products/index', productController.index, productController.indexView);
 app.get('/signUp', subscribersController.getSignUp);
 app.post('/contact', subscribersController.showSignUp);
 app.get('/products', productController.getAllProducts);

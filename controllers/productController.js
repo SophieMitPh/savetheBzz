@@ -5,6 +5,20 @@ module.exports = {
 		res.send(req.data.name);
 	},
 
+	index: (req, res, next) => {
+		Product.find()
+			.then(products => {
+				res.locals.products = products;
+				next();
+			}).catch(error => {
+				console.log(`Error fetching users: ${error.message}`);
+				next(error);
+			});
+	},
+	indexView: (req, res) => {
+		res.render('products/index');
+	},
+
 	getProductDetailView: (req, res) => {
 		let paramsName = req.params.productName;
 		Product.findOne({name: paramsName}).exec().then((p) => {
