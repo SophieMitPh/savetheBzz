@@ -17,8 +17,9 @@ const mongoose = require('mongoose'),
 			type: String,
 			required: true,
 			min: [7, 'Your password needs to be at least 7 characters'],
-		},
-	});
+		},	},
+	{ timeStamps: true},
+	);
 
 subscriberSchema.methods.getInfo = function() {
 	return `Name: ${this.name} Email: ${this.email}`;
