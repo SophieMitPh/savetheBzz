@@ -25,9 +25,10 @@ const mongoose = require('mongoose'),
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Product'
 			}
-		],
-		timestamps: true,
-	});
+		],	
+	},
+	{ timeStamps: true},
+	);
 
 userSchema.virtual('fullName')
 	.get(function() {

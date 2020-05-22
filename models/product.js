@@ -11,8 +11,10 @@ const mongoose = require('mongoose'),
 		description: {
 			type: String,
 			required: true
-		}
-	});
+		},
+	},
+	{ timeStamps: true},
+	);
 
 productSchema.methods.getInfo = () => {
 	return this.model('Product')
