@@ -5,7 +5,7 @@ const homeController = require('./controllers/homeController');
 const errorController = require('./controllers/errorController');
 const subscribersController = require('./controllers/subscribersController');
 const productController = require('./controllers/productController');
-
+const methodOverride = require('method-override')
 const layouts = require("express-ejs-layouts");
 const port = process.env.PORT || ((process.env.NODE_ENV === 'test') ? 30020 : 3002)
 app.set('port', port)
