@@ -1,7 +1,7 @@
 
 module.exports = {
 	getIndexPage: (req, res) => {
-		res.render('index');
+		res.render('home');
 	},
 
 	getProductDetailView: (req, res) => {

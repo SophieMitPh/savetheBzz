@@ -1,0 +1,25 @@
+<head>
+    <meta charset="utf-8">
+    <title>Product detailed view</title>
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock+Salt" />
+    <link href="//fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+</head>
+
+<h2>Users Table</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% users.forEach(user => { %>
+        <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+        </tr>
+    <% }); %>
+    </tbody>
+</table>

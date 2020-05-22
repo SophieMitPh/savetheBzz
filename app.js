@@ -5,6 +5,7 @@ const homeController = require('./controllers/homeController');
 const errorController = require('./controllers/errorController');
 const subscribersController = require('./controllers/subscribersController');
 const productController = require('./controllers/productController');
+const usersController = require('./controllers/usersController');
 
 const layouts = require('express-ejs-layouts');
 const port = process.env.PORT || ((process.env.NODE_ENV === 'test') ? 30020 : 3002);
@@ -19,6 +20,7 @@ app.set('view engine', 'ejs');
 app.use(layouts);
 app.use(express.static('public'));
 app.get('/', homeController.getIndexPage);
+app.get('/users', usersController.index, usersController.indexView);
 app.get('/signUp', subscribersController.getSignUp);
 app.post('/contact', subscribersController.showSignUp);
 app.get('/products', productController.getAllProducts);
