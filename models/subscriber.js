@@ -17,9 +17,19 @@ const mongoose = require('mongoose'),
 			type: String,
 			required: true,
 			min: [7, 'Your password needs to be at least 7 characters'],
-		},	},
-	{ timeStamps: true},
-	);
+		},
+		//every subscriber can add the product to the card even not being signed in.
+		products: [
+			{
+			type: Schema.Types.ObjectId,
+			 ref: "Product"
+			}
+		]	
+	}, 
+	{ 
+		timeStamps: true
+	}
+);
 
 subscriberSchema.methods.getInfo = function() {
 	return `Name: ${this.name} Email: ${this.email}`;

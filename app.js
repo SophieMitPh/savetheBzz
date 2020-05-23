@@ -15,6 +15,7 @@ app.use(
 		extended: false
 	})
 );
+app.use(methodOverride("_method", {methods: ["POST", "GET"]}));
 app.use(express.json());
 app.set('view engine', 'ejs');
 app.use(layouts);

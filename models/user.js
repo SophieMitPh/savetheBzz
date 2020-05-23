@@ -27,9 +27,19 @@ const mongoose = require('mongoose'),
 				ref: 'Product'
 			}
 		],
-		subscribedAccount: { type: mongoose.Schema.Types.ObjectId, ref: 'Subscriber'}
+		subscribedAccount: { 
+			type: mongoose.Schema.Types.ObjectId, 
+			ref: 'Subscriber'},
+		products: [
+			{
+			type:mongoose.Schema.Types.ObjectId,
+			 ref: "Product"
+			}
+		]
 	},
-	{ timeStamps: true},
+	{ 
+		timeStamps: true
+	},
 	);
 
 userSchema.virtual('fullName')
