@@ -32,14 +32,14 @@
     border-radius: 5px;
     box-sizing: border-box;
     margin: 20px;
-    padding: 20px;
+    padding: 5px;
     flex-basis: auto;
 }
 
 .product-image{
     width: 320px;
-    height: 320px;
-    margin: 20px;
+    height: 370px;
+    margin: 3px;
 }
 
 .description-container {
