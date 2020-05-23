@@ -9,7 +9,7 @@ exports[`renders home correctly 1`] = `
             <h1 id=\\"headerTitle\\">Save the Bzz!</h1>
         </div>
         <div class=\\"logos\\">
-            <a href=\\"/users/new\\"><img id=\\"account\\" src=\\"/images/account.png\\" /></a>
+            <a href=\\"/signup\\"><img id=\\"account\\" src=\\"/images/account.png\\" /></a>
             <a href=\\"/wishlist\\"><img id=\\"wishList\\" src=\\"/images/wishList.png\\" /></a>
             <a href=\\"/cart\\"><img id=\\"cart\\" src=\\"/images/cart.png\\" /></a>
         </div>
@@ -24,6 +24,7 @@ exports[`renders home correctly 1`] = `
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/css/header.css\\">
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/css/index.css\\">
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"//fonts.googleapis.com/css?family=Rock+Salt\\" />
+    <link href=\\"//fonts.googleapis.com/css2?family=Raleway\\" rel=\\"stylesheet\\">
     <link rel=\\"stylesheet\\" href=\\"https://www.w3schools.com/w3css/4/w3.css\\">
 </head>
 <body class=\\"main\\">
@@ -32,13 +33,13 @@ exports[`renders home correctly 1`] = `
     </div>
     <div class=\\"button-container\\">
         <div class=\\"button-style\\">
-            <a href=\\"products\\"><button class=\\"w3-button w3-yellow\\">Product Overview</button></a>
+            <a href=\\"products\\"><button class=\\"w3-button\\">Our products</button></a>
         </div>
         <div class=\\"button-style\\">
-            <a href=\\"addProduct\\"><button class=\\"w3-button w3-yellow\\">Add a product!</button></a>
+            <a href=\\"addProduct\\"><button class=\\"w3-button\\">Add product!</button></a>
         </div>
         <div class=\\"button-style\\">
-            <a href=\\"signUp\\"><button class=\\"w3-button w3-yellow\\">Subscribe to our newsletter!</button></a>
+            <a href=\\"signUp\\"><button class=\\"w3-button\\">Subscribe to our newsletter!</button></a>
         </div>
     </div>
 </body>
