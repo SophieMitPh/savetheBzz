@@ -21,10 +21,12 @@ app.set('view engine', 'ejs');
 app.use(layouts);
 app.use(express.static('public'));
 app.get('/', homeController.getIndexPage);
+
 app.get('/users', usersController.index, usersController.indexView);
 app.get('/users/new', usersController.new);
 app.get('/users/:id', usersController.show, usersController.showView);
 app.post('/users/create', usersController.create, usersController.redirectView);
+
 app.get('/products/index', productController.index, productController.indexView);
 app.get('/signUp', subscribersController.getSignUp);
 app.post('/contact', subscribersController.showSignUp);
@@ -34,9 +36,15 @@ app.get('/cart', homeController.getCartView);
 app.get('/wishlist', homeController.getWishList);
 app.get('/addProduct', productController.getAddProductView);
 app.post('/newProduct', productController.saveProduct);
-app.get('/subscribers', subscribersController.getAllSubscribers, (req, res, next) => {
-	res.render('subscribers', { subscribers: req.data });
-});
+//routes for subscriber created but not checked yet
+app.get('/subscribers', subscribersController.index, subscribersController.indexView);
+app.get("/subscribers/new", subscribersController.new);
+app.get('/subscribers/create', subscribersController.create, subscribersController.redirectView)
+app.get('subscribers/:id/edit', subscribersController.edit);
+app.get('/subscribers/:id/update',  subscribersController.update, subscribersController.redirectView)
+app.get("/subscribers/:id", subscribersController.show, subscribersController.showView);
+app.delete( "/subscribers/:id/delete", subscribersController.delete, subscribersController.redirectView);
+
 app.use(errorController.logErrors);
 app.use(errorController.respondInternalError);
 app.use(errorController.respondNoResourceFound);
