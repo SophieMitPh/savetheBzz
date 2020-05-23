@@ -13,11 +13,6 @@ const mongoose = require('mongoose'),
 			required: true,
 			unique: true,
 		},
-		password: {
-			type: String,
-			required: true,
-			min: [7, 'Your password needs to be at least 7 characters'],
-		},
 		//every subscriber can add the product to the card even not being signed in.
 		products: [
 			{

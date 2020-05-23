@@ -1,6 +1,12 @@
 const mongoose = require('mongoose'),
 	Subscriber = require('../models/subscriber');
-
+	getSubscriberParams = body => {
+		return {
+		  name: body.name,
+		  lastname: body.lastname,
+		  email: body.email,
+		};
+	  };
 
 module.exports = {
 	getAllSubscribers: (req, res) => {
@@ -18,11 +24,11 @@ module.exports = {
 			});
 	},
 
-	getSignUp: (req, res) => {
+	/*getSignUp: (req, res) => {
 		res.render('signUp');
-	},
+	},*/
 
-	showSignUp: (req, res) => {
+	/*showSignUp: (req, res) => {
 		let signUpData = req.body;
 		let newSubscriber = new Subscriber({
 			name: req.body.name,
@@ -40,7 +46,7 @@ module.exports = {
 		}).catch(error => {
 			res.send(error);
 		});
-	},
+	},*/
 
 	index: (req, res, next) => {
 		Subscriber.find()
@@ -101,7 +107,7 @@ module.exports = {
 		let subscriberId = req.params.id;
 		Subscriber.findById(subscriberId)
 		  .then(subscriber => {
-			res.render("subscribers/edit", {
+			res.render("/subscribers/edit", {
 			  subscriber: subscriber
 			});
 		  })
