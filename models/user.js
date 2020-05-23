@@ -1,15 +1,21 @@
 const Subscriber = require('../models/subscriber');
 const mongoose = require('mongoose'),
 	userSchema = mongoose.Schema({
-		name: {
-			first: {
-				type: String,
-				trim: true
-			},
-			last: {
+		name: { 
+			type: String,
+			trim: true
+			/*first: {
 				type: String,
 				trim: true
 			}
+			last: {
+				type: String,
+				//trim: true
+			}*/
+		},
+		lastname: {
+			type: String,
+			trim: true
 		},
 		email: {
 			type: String,
@@ -44,7 +50,7 @@ const mongoose = require('mongoose'),
 
 userSchema.virtual('fullName')
 	.get(function() {
-		return `${this.name.first} ${this.name.last}`;
+		return `${this.name} ${this.lastname}`;
 	});
 
 userSchema.methods.getInfo = function() {

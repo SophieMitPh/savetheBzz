@@ -22,13 +22,13 @@ router.use(express.static('public'));
 router.get('/', homeController.getIndexPage);
 
 router.get('/users', usersController.index, usersController.indexView);
-router.get('/users/new', usersController.new);
+router.get('/signup', usersController.new);
 router.get('/users/:id', usersController.show, usersController.showView);
-router.post('/users/create', usersController.create, usersController.redirectView);
+router.post('/contact', usersController.create, usersController.redirectView);
 
 router.get('/products/index', productController.index, productController.indexView);
 //router.get('/signUp', subscribersController.getSignUp);
-//router.post('/contact', subscribersController.showSignUp);
+//router.post('/contact', usersController.showSignUp);
 router.get('/products', productController.getAllProducts);
 router.get('/product/:productName', productController.getProductDetailView);
 router.get('/cart', homeController.getCartView);

@@ -14,20 +14,28 @@ module.exports = {
 		res.render('users/index');
 	},
 	new: (req, res) => {
-		res.render('users/new');
+		res.render('signup');
 	},
 	create: (req, res, next) => {
 		let userParams = {
-			name: {
-				first: req.body.first,
-				last: req.body.last
-			},
+			name: req.body.name,
+			lastname: req.body.lastname,
+			//{
+				//first: req.body.name.first,
+			//	last: req.body.name.last
+			//},
 			email: req.body.email,
 			password: req.body.password,
 		};
 		User.create(userParams)
 			.then(user => {
-				res.locals.redirect = '/users';
+				res.render('contact', {
+					name: userParams.name,
+					lastname: userParams.lastname,
+					email: userParams.email,
+					password: userParams.password
+				})
+				res.locals.redirect = '/contact';
 				res.locals.user = user;
 				next();
 			})
