@@ -14,7 +14,6 @@ body {
     flex-direction: column;
     bottom: 0;
     background: #F1EDED;
-    border: 1px solid #FFFFFF;
     box-sizing: border-box;
 }
 
@@ -109,7 +108,11 @@ select {
     width: 25px;
     height: 28px;
 }
-
+.bin-subscribers {
+    width: 25px;
+    height: 28px;
+    margin-left: 10px;
+}
 .total-box {
     margin-left: 10px;
     width: 326px;
@@ -155,7 +158,7 @@ select {
     background: #F6FA41;
 }
 .edit {
-    margin: 30px 10px 0px 10px;
+    margin: 5px 10px 5px 10px;
     width: 100px;
     height: 50px;
     left: 818px;
