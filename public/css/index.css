@@ -47,7 +47,8 @@ body {
 }
 
 .w3-button {
-    width:190px;
+    width:245px;
     height: 60px;
-    border-radius: 5px;}
+    border-radius: 5px;
+    background-color: #ECEE81 !important;}
     

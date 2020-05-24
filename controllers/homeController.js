@@ -1,16 +1,19 @@
-exports.getIndexPage = (req, res) => {
-	res.render('index');
-};
 
-exports.getProductDetailView = (req, res) => {
-	let paramsName = req.params.product;
-	res.render('productDetailView', { product: paramsName });
-};
+module.exports = {
+	getIndexPage: (req, res) => {
+		res.render('home');
+	},
 
-exports.getCartView = (req, res) => {
-	res.render('cart');
-};
+	getProductDetailView: (req, res) => {
+		let paramsName = req.params.product;
+		res.render('productDetailView', {product: paramsName});
+	},
 
-exports.getWishList = (req, res) => {
-	res.render('wishList');
+	getCartView: (req, res) => {
+		res.render('cart');
+	},
+
+	getWishList: (req, res) => {
+		res.render('wishList');
+	},
 };
