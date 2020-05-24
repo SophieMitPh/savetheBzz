@@ -14,33 +14,26 @@ module.exports = {
 		res.render('users/index');
 	},
 	new: (req, res) => {
-		res.render('signup');
+		res.render('users/new');
 	},
 	create: (req, res, next) => {
 		let userParams = {
-			name: req.body.name,
-			lastname: req.body.lastname,
-			//{
-				//first: req.body.name.first,
-			//	last: req.body.name.last
-			//},
+			name: {
+				first: req.body.first,
+				last: req.body.last
+			},
 			email: req.body.email,
 			password: req.body.password,
 		};
 		User.create(userParams)
 			.then(user => {
-				res.render('contact', {
-					name: userParams.name,
-					lastname: userParams.lastname,
-					email: userParams.email,
-					password: userParams.password
-				})
-				res.locals.redirect = '/contact';
+				res.locals.redirect = '/users';
 				res.locals.user = user;
 				next();
 			})
 			.catch(error => {
 				console.log(`Error saving user: ${error.message}`);
+				res.send(`Error saving user: ${error.message}`);
 				next(error);
 			});
 	},

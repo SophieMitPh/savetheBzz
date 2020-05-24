@@ -1,21 +1,15 @@
 const Subscriber = require('../models/subscriber');
 const mongoose = require('mongoose'),
 	userSchema = mongoose.Schema({
-		name: { 
-			type: String,
-			trim: true
-			/*first: {
+		name: {
+			first: {
 				type: String,
 				trim: true
-			}
+			},
 			last: {
 				type: String,
-				//trim: true
-			}*/
-		},
-		lastname: {
-			type: String,
-			trim: true
+				trim: true,
+			},
 		},
 		email: {
 			type: String,
@@ -38,8 +32,8 @@ const mongoose = require('mongoose'),
 			ref: 'Subscriber'},
 		products: [
 			{
-			type:mongoose.Schema.Types.ObjectId,
-			 ref: "Product"
+				type:mongoose.Schema.Types.ObjectId,
+				ref: 'Product'
 			}
 		]
 	},
@@ -50,7 +44,7 @@ const mongoose = require('mongoose'),
 
 userSchema.virtual('fullName')
 	.get(function() {
-		return `${this.name} ${this.lastname}`;
+		return `${this.name.first} ${this.name.last}`;
 	});
 
 userSchema.methods.getInfo = function() {
