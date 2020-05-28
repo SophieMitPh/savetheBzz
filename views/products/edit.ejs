@@ -16,11 +16,11 @@
         <form method="POST" action="<%=`/products/${product._id}/update?_method=PUT`%>">
             <h2>Edit product:</h2>
             <label for="inputName">Name</label>
-            <input type="text" name="name" id="productName" value="<%= product.name %>" placeholder="Name" autofocus>
+            <input type="text" name="name" value="<%= product.name %>" placeholder="Name" autofocus>
             <label for="inputDescription">Description</label>
-            <input type="text" name="name" id="productName" value="<%= product.description %>" placeholder="Description" autofocus>
+            <input type="text" name="description" value="<%= product.description %>" placeholder="Description" autofocus>
             <label for="inputPrice">Price</label>
-            <input type="text" name="price" id="price" value="<%= product.price %>" placeholder="Price" autofocus>
+            <input type="text" name="price" value="<%= product.price %>" placeholder="Price" autofocus>
             <button type="submit">Update</button>
         </form>
     </div>
