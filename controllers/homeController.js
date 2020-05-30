@@ -16,4 +16,8 @@ module.exports = {
 	getWishList: (req, res) => {
 		res.render('wishList');
 	},
+
+	getPersonalAccount: (req, res) => {
+		res.render('account');
+	}
 };

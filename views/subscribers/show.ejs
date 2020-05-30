@@ -13,47 +13,47 @@
 </head>
 
 <body class="body">
-    <div class="main">
-        <div class="pageTitle">
-            <h1>Our subscriber: <%= subscriber.fullName %></h1>
-        </div>
-        <div class="cart-container">
-            <table class="table">
-                <tr>
-                    <th>Full name</th>
-                    <td>
-                        <%= subscriber.fullName %>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Email</th>
-                    <td>
-                        <%= subscriber.email%>
-                    </td>
-                </tr>
-            </table>
-            <div>
-                <a class="button" href="<%=`/subscribers/${subscriber._id}/edit`%>">
-                    <button class="edit">
-                        Edit
-                    </button>
-                </a>
-            </div>
-            <div>
-                <a href="<%= `/subscribers/${subscriber._id}/delete?_method=DELETE` %>"
-                    onclick="return confirm('Are you sure you want to delete this record?')" a>
-                    <img class="bin-subscribers" src="/images/trash.png" />
-                </a>
-            </div>
-            <div>
 
-                <a href="/subscribers">
-                    <button class="w3-button">
-                        View all subscribers
-                    </button>
-                </a>
-            </div>
+    <div class="pageTitle">
+        <h1 class="pageTitle">Info about subscriber: <%= subscriber.fullName %></h1>
+    </div>
+    <div class="cart-container">
+        <table class="table">
+            <tr>
+                <th>Full name</th>
+                <td>
+                    <%= subscriber.fullName %>
+                </td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>
+                    <%= subscriber.email%>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <a class="button" href="<%=`/subscribers/${subscriber._id}/edit`%>">
+                <button class="edit">
+                    Edit
+                </button>
+            </a>
         </div>
+        <div>
+            <a href="<%= `/subscribers/${subscriber._id}/delete?_method=DELETE` %>"
+                onclick="return confirm('Are you sure you want to delete this record?')" a>
+                <img class="bin-subscribers" src="/images/trash.png" />
+            </a>
+        </div>
+        <div>
+
+            <a href="/subscribers">
+                <button class="w3-button">
+                    View all subscribers
+                </button>
+            </a>
+        </div>
+
     </div>
 </body>
 

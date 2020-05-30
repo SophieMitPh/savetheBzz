@@ -40,7 +40,8 @@ router.delete( '/products/:id/delete', productController.delete, productControll
 
 router.get('/cart', homeController.getCartView);
 router.get('/wishlist', homeController.getWishList);
-//routes for subscriber created but not checked yet
+router.get('/my-account/profile', homeController.getPersonalAccount);
+
 router.get('/subscribers', subscribersController.index, subscribersController.indexView);
 router.get('/subscribers/new', subscribersController.new);
 router.post('/subscribers/create', subscribersController.create, subscribersController.redirectView);
