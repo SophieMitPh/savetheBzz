@@ -25,19 +25,27 @@ router.get('/users', usersController.index, usersController.indexView);
 router.get('/users/new', usersController.new);
 router.get('/users/:id', usersController.show, usersController.showView);
 router.post('/users/create', usersController.create, usersController.redirectView);
+router.get('/users/:id/edit', usersController.edit);
+router.put('/users/:id/update', usersController.update, usersController.redirectView);
+router.delete( '/users/:id/delete', usersController.delete, usersController.redirectView);
 
-router.get('/products/index', productController.index, productController.indexView);
-router.get('/products', productController.getAllProducts);
-router.get('/product/:productName', productController.getProductDetailView);
+router.get('/productOverview', productController.getAllProducts);
+router.get('/products', productController.index, productController.indexView);
+router.get('/products/new', productController.new);
+router.get('/products/:id', productController.show, productController.showView);
+router.post('/products/create', productController.create, productController.redirectView);
+router.get('/products/:id/edit', productController.edit);
+router.put('/products/:id/update', productController.update, productController.redirectView);
+router.delete( '/products/:id/delete', productController.delete, productController.redirectView);
+
 router.get('/cart', homeController.getCartView);
 router.get('/wishlist', homeController.getWishList);
-router.get('/addProduct', productController.getAddProductView);
-router.post('/newProduct', productController.saveProduct);
-//routes for subscriber created but not checked yet
+router.get('/my-account/profile', homeController.getPersonalAccount);
+router.get('/my-account/address', homeController.getShippingAddress);
 router.get('/subscribers', subscribersController.index, subscribersController.indexView);
 router.get('/subscribers/new', subscribersController.new);
 router.post('/subscribers/create', subscribersController.create, subscribersController.redirectView);
-router.get('subscribers/:id/edit', subscribersController.edit);
+router.get('/subscribers/:id/edit', subscribersController.edit);
 router.put('/subscribers/:id/update',  subscribersController.update, subscribersController.redirectView);
 router.get('/subscribers/:id', subscribersController.show, subscribersController.showView);
 router.delete( '/subscribers/:id/delete', subscribersController.delete, subscribersController.redirectView);

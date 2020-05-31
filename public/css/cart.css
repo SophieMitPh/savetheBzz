@@ -108,11 +108,13 @@ select {
     width: 25px;
     height: 28px;
 }
+
 .bin-subscribers {
     width: 25px;
     height: 28px;
     margin-left: 10px;
 }
+
 .total-box {
     margin-left: 10px;
     width: 326px;
@@ -157,6 +159,7 @@ select {
     top: 538px;
     background: #F6FA41;
 }
+
 .edit {
     margin: 5px 10px 5px 10px;
     width: 100px;
@@ -164,7 +167,14 @@ select {
     left: 818px;
     top: 538px;
     background: #F6FA41;
+    border: none;
 }
+
+.edit:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
 .inline {
     display: inline-block;
     height: 240px;
@@ -178,4 +188,30 @@ select {
     font-weight: 300;
     font-size: 20px;
     text-align: right;
+}
+
+a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(119, 104, 104);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-size:110%;
+}
+
+tr td {
+    padding: 10px 15px;
+    font-family: Raleway;
+    text-align: center;
+}
+
+thead tr {
+    font-size: 20px;
+    font-family: Raleway;
 }

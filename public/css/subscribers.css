@@ -9,10 +9,11 @@ body {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.main {
+.main-sub {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    align-items: center;
 }
 
 .pageTitle {
@@ -25,26 +26,58 @@ body {
     align-self: center;
 }
 
-.button-container {
+.cart-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px;
 }
 
-.button-style {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 35px;
+.trash {
+    margin-right: 30px;
+    margin-top: 25px;
+}
+
+.bin {
+    width: 25px;
+    height: 28px;
+}
+
+.bin-subscribers {
+    width: 25px;
+    height: 28px;
+    margin-left: 10px;
+}
+
+.edit {
+    margin: 5px 10px 5px 10px;
+    width: 100px;
+    height: 50px;
+    left: 818px;
+    top: 538px;
+    background: #F6FA41;
+    border: none;
+}
+
+.edit:hover {
+    background-color: #ccc;
+    cursor: pointer;
 }
 
 .w3-button {
     width:245px;
     height: 60px;
+    margin-top: 20px;
     border-radius: 5px;
     background-color: #ECEE81 !important;}
+
+.link {
+    text-decoration: none;
+    font-size: 100%;
+}
+
+tr td {
+    padding: 10px 45px;
+    font-family: Raleway;
+    text-align: center;
+}

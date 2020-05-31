@@ -34,7 +34,7 @@ Product.remove({})
 	.then(product => console.log(product.name))
 	.then(() => {
 		return Product.create({
-			name: 'Ribbed Button Up Swimsuit',
+			name: 'Button Up Swimsuit',
 			price: 35,
 			description: 'Ribbed square neck one piece swimsuit with five button closures and a low cut back.'
 		});
@@ -45,6 +45,22 @@ Product.remove({})
 			name: 'Gathered Leather O-Ring Bag',
 			price: 102,
 			description: 'Smooth leather bag in a gathered, multi-draped finish. Featuring gold toned O-ring connectors and two straps for versatile wearing.'
+		});
+	})
+	.then(product => console.log(product.name))
+	.then(() => {
+		return Product.create({
+			name: 'Cotton T-shirt',
+			price: 55,
+			description: '100% cotton T-shirt.'
+		});
+	})
+	.then(product => console.log(product.name))
+	.then(() => {
+		return Product.create({
+			name: 'Leather skirt',
+			price: 59,
+			description: 'Faux leather skirt.'
 		});
 	})
 	.then(product => console.log(product.name))
