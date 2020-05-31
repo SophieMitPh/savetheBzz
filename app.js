@@ -30,6 +30,7 @@ router.put('/users/:id/update', usersController.update, usersController.redirect
 router.delete( '/users/:id/delete', usersController.delete, usersController.redirectView);
 
 router.get('/productOverview', productController.getAllProducts);
+router.get('/product/:name', productController.getDetailedView);
 router.get('/products', productController.index, productController.indexView);
 router.get('/products/new', productController.new);
 router.get('/products/:id', productController.show, productController.showView);
