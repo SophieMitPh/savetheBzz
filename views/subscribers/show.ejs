@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <title>Our subscribers</title>
     <link rel="stylesheet" type="text/css" href="/css/header.css">
-    <link rel="stylesheet" type="text/css" href="/css/index.css">
-    <link rel="stylesheet" type="text/css" href="/css/cart.css">
+    <link rel="stylesheet" type="text/css" href="/css/subscribers.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock+Salt" />
     <link href="//fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,9 +13,11 @@
 
 <body class="body">
 
-    <div class="pageTitle">
-        <h1 class="pageTitle">Info about subscriber: <%= subscriber.fullName %></h1>
-    </div>
+    
+    <div class="main-sub">
+        <div class="pageTitle">
+            <h1>Info about subscriber: <%= subscriber.fullName %></h1>
+        </div>
     <div class="cart-container">
         <table class="table">
             <tr>
@@ -45,16 +46,15 @@
                 <img class="bin-subscribers" src="/images/trash.png" />
             </a>
         </div>
-        <div>
-
-            <a href="/subscribers">
-                <button class="w3-button">
-                    View all subscribers
-                </button>
-            </a>
-        </div>
-
     </div>
+    <div>
+        <a href="/subscribers" class="link">
+            <button class="w3-button">
+                View all subscribers
+            </button>
+        </a>
+    </div>
+</div>
 </body>
 
 </html>

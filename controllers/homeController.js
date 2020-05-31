@@ -18,6 +18,10 @@ module.exports = {
 	},
 
 	getPersonalAccount: (req, res) => {
-		res.render('account');
+		res.render('account/account');
+	},
+
+	getShippingAddress: (req, res) => {
+		res.render('account/address');
 	}
 };
