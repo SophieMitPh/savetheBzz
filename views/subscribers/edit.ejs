@@ -15,11 +15,11 @@
     <div>
         <h2>Edit subscriber:</h2>
         <div class="signUpRectangle">
-            <form action="<%=`/subscribers/${subscriber._id}/update?_method=PUT`%>" method="post" class="form-container">
+            <form  method="post" action="<%=`/subscribers/${subscriber._id}/update?_method=PUT`%>" class="form-container">
                 <input type="text" placeholder="First Name" name="name" value="<%= subscriber.name %>" required>
                 <input type="text" placeholder="Last Name" name="lastname" value="<%= subscriber.lastname %>"required>
                 <input type="email" placeholder="Email" name="email" value="<%= subscriber.email %>" required>
-                <button type="submit" id="signup-button">CREATE</button>
+                <button type="submit" id="signup-button">SAVE CHANGES</button>
             </form>
         </div>
     </div>

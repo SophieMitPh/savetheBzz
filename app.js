@@ -45,7 +45,7 @@ router.get('/my-account/profile', homeController.getPersonalAccount);
 router.get('/subscribers', subscribersController.index, subscribersController.indexView);
 router.get('/subscribers/new', subscribersController.new);
 router.post('/subscribers/create', subscribersController.create, subscribersController.redirectView);
-router.get('subscribers/:id/edit', subscribersController.edit);
+router.get('/subscribers/:id/edit', subscribersController.edit);
 router.put('/subscribers/:id/update',  subscribersController.update, subscribersController.redirectView);
 router.get('/subscribers/:id', subscribersController.show, subscribersController.showView);
 router.delete( '/subscribers/:id/delete', subscribersController.delete, subscribersController.redirectView);
