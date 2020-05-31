@@ -13,16 +13,15 @@
 <body>
 <div class="background">
     <div class="data-form">
-        <form method="POST" action="<%=`/users/${user._id}/update?_method=PUT`%>">
+        <form method="POST" action="<%=`/users/${user._id}/update?_method=PUT`%>" class="form-container">
             <h2>Edit user:</h2>
-            <label for="inputName">First</label>
             <label for="inputDescription">First Name</label>
             <input type="text" name="first" value="<%= user.name.first %>" placeholder="First" autofocus>
             <label for="inputDescription">Last Name</label>
             <input type="text" name="last" value="<%= user.name.last %>" placeholder="Last" autofocus>
             <label for="inputDescription">Email</label>
             <input type="text" name="email" value="<%= user.email %>" placeholder="Email" autofocus>
-            <button type="submit">Update</button>
+            <button type="submit" id="signup-button">Update</button>
         </form>
     </div>
 </div>

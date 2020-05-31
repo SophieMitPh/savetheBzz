@@ -29,7 +29,7 @@ h2 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 20px auto;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     background: #FDF8F8;
@@ -41,6 +41,7 @@ input, textarea {
     display: flex;
     justify-content: center;
     align-content: space-around;
+    width: 70%;
     margin: 10px;
     padding: 12px 20px;
     background: #FFF2F2;
@@ -65,8 +66,9 @@ p > a {
 }
 
 #signup-button {
-    width: 94px;
+    width: 150px;
     height: 52px;
+    margin-top: 15px;
     background: #F6FA41;
     border: none;
 }
