@@ -23,5 +23,9 @@ module.exports = {
 
 	getShippingAddress: (req, res) => {
 		res.render('account/address');
+	},
+
+	getPaymentMethods: (req, res) => {
+		res.render('account/payment');
 	}
 };

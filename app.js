@@ -43,6 +43,8 @@ router.get('/cart', homeController.getCartView);
 router.get('/wishlist', homeController.getWishList);
 router.get('/my-account/profile', homeController.getPersonalAccount);
 router.get('/my-account/address', homeController.getShippingAddress);
+router.get('/my-account/payment', homeController.getPaymentMethods);
+
 router.get('/subscribers', subscribersController.index, subscribersController.indexView);
 router.get('/subscribers/new', subscribersController.new);
 router.post('/subscribers/create', subscribersController.create, subscribersController.redirectView);
