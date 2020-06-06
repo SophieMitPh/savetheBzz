@@ -8,17 +8,17 @@ const productController = require('./controllers/productController');
 const usersController = require('./controllers/usersController');
 const methodOverride = require('method-override');
 const layouts = require('express-ejs-layouts');
-const passport = require("passport");
-const cookie = require("cookie-parser");
-const session = require("express-session");
-const User = require("./models/user"),
-connectFlash = require("connect-flash"),
-expressValidator = require("express-validator");
+const passport = require('passport');
+const cookie = require('cookie-parser');
+const session = require('express-session');
+const User = require('./models/user'),
+	connectFlash = require('connect-flash'),
+	expressValidator = require('express-validator');
 
 app.use('/', router);
-router.use(cookie("secretCodeBzz"));
+router.use(cookie('secretCodeBzz'));
 router.use(session({
-	secret: "secretCodeBzz",
+	secret: 'secretCodeBzz',
 	cookie: {
 		maxAge: 4000000
 	},
@@ -55,9 +55,9 @@ router.get('/', homeController.getIndexPage);
 router.get('/users', usersController.index, usersController.indexView);
 router.get('/users/new', usersController.new);
 router.post('/users/create',
- usersController.validate,
- usersController.create,
- usersController.redirectView
+	usersController.validate,
+	usersController.create,
+	usersController.redirectView
 );
 router.get('/users/login', usersController.login);
 router.post('/users/login', usersController.authenticate);
@@ -73,13 +73,13 @@ router.get('/products', productController.index, productController.indexView);
 router.get('/products/new', productController.new);
 router.get('/products/:id', productController.show, productController.showView);
 router.post('/products/create',
- productController.create, 
- productController.redirectView);
+	productController.create, 
+	productController.redirectView);
 router.get('/products/:id/edit', productController.edit);
 router.put('/products/:id/update', productController.update, productController.redirectView);
 router.delete( '/products/:id/delete',
- productController.delete,
- productController.redirectView
+	productController.delete,
+	productController.redirectView
 );
 
 router.get('/cart', homeController.getCartView);
@@ -91,18 +91,18 @@ router.get('/my-account/payment', homeController.getPaymentMethods);
 router.get('/subscribers', subscribersController.index, subscribersController.indexView);
 router.get('/subscribers/new', subscribersController.new);
 router.post('/subscribers/create',
- subscribersController.create,
- subscribersController.redirectView
+	subscribersController.create,
+	subscribersController.redirectView
 );
 router.get('/subscribers/:id/edit', subscribersController.edit);
 router.put('/subscribers/:id/update',
- subscribersController.update,
- subscribersController.redirectView
+	subscribersController.update,
+	subscribersController.redirectView
 );
 router.get('/subscribers/:id', subscribersController.show, subscribersController.showView);
 router.delete( '/subscribers/:id/delete',
- subscribersController.delete,
- subscribersController.redirectView
+	subscribersController.delete,
+	subscribersController.redirectView
 );
 
 router.use(errorController.logErrors);

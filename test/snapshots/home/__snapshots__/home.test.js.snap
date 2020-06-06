@@ -15,6 +15,16 @@ exports[`renders home correctly 1`] = `
         </div>
     </div>
 </div>
+<div class=\\"flashes\\">
+    
+     
+    
+</div>
+<div class=\\"login\\">
+    
+    <a href=\\"/users/login\\">Log In</a>
+    
+   </div>
 <!DOCTYPE html>
 <html>
 

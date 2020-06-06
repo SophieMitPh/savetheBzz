@@ -1,4 +1,4 @@
-const passport = require("passport");
+const passport = require('passport');
 const User = require('../models/user');
 module.exports = {
 	index: (req, res, next) => {
@@ -19,18 +19,18 @@ module.exports = {
 	},
 	validate: (req, res, next) => {
 		req
-		.sanitizeBody("email")
-		.normilizeEmail({
-			all_lowercase: true
-		})
-		.trim();
-		req.check("email", "Email is invalid").isEmail();
-		req.check("password", "Password cannot be empty").notEmpty();
-		req.getValiationResult().then((error) => {
+			.sanitizeBody('email')
+			.normalizeEmail({
+				all_lowercase: true
+			})
+			.trim();
+		req.check('email', 'Email is invalid').isEmail();
+		req.check('password', 'Password cannot be empty').notEmpty();
+		req.getValidationResult().then((error) => {
 			if(!error.isEmpty()) {
 				let messages = error.array().map(e => e.msg);
 				req.skip = true;
-				req.flash("error", messages.join(" and "));
+				req.flash('error', messages.join(' and '));
 				res.locals.redirect = '/users/new';
 				next();
 			} else {
@@ -53,16 +53,16 @@ module.exports = {
 		let newUser = new User(userParams);
 		User.register(newUser, req.body.password, (e, user) => {
 			if(user) {
-				req.flash("success", `${user.fullName}'s account created successfully!`);
+				req.flash('success', `${user.fullName}'s account created successfully!`);
 				res.locals.redirect = '/users';
 				//res.locals.user = user;
 				next();
 			} else {
-				req.flash("error", `Failed to create user account because: ${e.message}.`);
+				req.flash('error', `Failed to create user account because: ${e.message}.`);
 				res.locals.redirect = '/users/new';
 				next();
 			}
-	})},
+		});},
 	redirectView: (req, res, next) => {
 		let redirectPath = res.locals.redirect;
 		if (redirectPath) res.redirect(redirectPath);
@@ -137,17 +137,17 @@ module.exports = {
 		res.render('users/login');
 	},
 
-	authenticate: passport.authenticate("local", {
-		failureRedirect: "/users/login",
-		failureFlash: "Failed to login.", 
-		successRedirect: "/",
-		successFlash: "Logged in!"
+	authenticate: passport.authenticate('local', {
+		failureRedirect: '/users/login',
+		failureFlash: 'Failed to login.', 
+		successRedirect: '/',
+		successFlash: 'Logged in!'
 	}),
 	
 	logout: (req, res, next) => {
 		req.logout();
-		req.flash("success", "You have been logged out!");
-		res.locals.redirect = "/";
+		req.flash('success', 'You have been logged out!');
+		res.locals.redirect = '/';
 		next();
 	}
 };
