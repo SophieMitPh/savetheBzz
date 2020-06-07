@@ -1,0 +1,113 @@
+html {
+    height: 100%;
+}
+
+.background {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+    background: #F1EDED;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+    font-family: Raleway, serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    
+    line-height: 42px;
+    color: #000000;
+}
+.login-container {
+    display: flex;
+    flex-direction: row;
+}
+.login-rectangle {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+
+input, textarea {
+   
+    width: 70%;
+    margin: 10px;
+    align-self: center;
+    padding: 18px 20px;
+    background: #FFF2F2;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+}
+
+p{
+    font-family: Raleway, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 23px;
+    text-align: left;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #000000;
+}
+
+p > a {
+    color: #0000ff;
+}
+
+#signup-button {
+    width: 150px;
+    height: 52px;
+    align-self: center;
+    margin-top: 15px;
+    background: #ECEE81;
+    border-style: 2px #000000;
+}
+
+#signup-button:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.main-text {
+    text-align: center;
+    font-weight: bolder;
+    font-family: Raleway;
+    margin-top: 100px;
+    font-size: 64px;
+    line-height: 1.1em;
+    margin-bottom: 0;
+}
+
+.welcome {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.signup-link {
+    align-self: center;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ECEE81;
+    margin: 50px 50px 15px 50px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}

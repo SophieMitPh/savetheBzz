@@ -47,7 +47,7 @@ body {
     margin-left: 10px;
     font-style: normal;
     font-weight: 200;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 28px;
     border: 3px solid #cfc4c4;
     border-radius: 4px;
@@ -82,8 +82,7 @@ body {
 
 input, textarea {
     display: flex;
-    justify-content: center;
-    align-content: space-around;
+    align-content: center;
     color: rgb(48, 43, 43);
     width: 75%;
     margin: 10px;
@@ -96,6 +95,11 @@ input, textarea {
     text-align: left;
 }
 
+label {
+    font-family: Raleway;
+    font-size: 14px;
+}
+
 #save-changes-button {
     width: 150px;
     height: 45px;
@@ -104,10 +108,13 @@ input, textarea {
     border: none;
 }
 
+#save-changes-button:hover {
+    background: #ccc;
+    cursor: pointer;
+}
 select {
     display: flex;
-    justify-content: center;
-    align-content: space-around;
+    align-content: center;
     width: 75%;
     margin: 10px;
     padding: 12px 20px;

@@ -130,4 +130,22 @@ module.exports = {
 				console.log('Promise complete');
 			});
 	},
+
+	getDetailedView: (req, res) => {
+		let productName = req.params.name;
+		Product.findOne({ name: productName })
+		.exec()
+		.then((product) => {
+			res.locals.product = product;
+			res.render("productDetailView",
+			{
+			name: product.name,
+			description: product.description,
+			price: product.price
+			});
+		})
+		.catch((error) => {
+			console.log(error.message);
+		})
+	}
 };
