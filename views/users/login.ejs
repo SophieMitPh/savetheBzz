@@ -12,8 +12,7 @@
 
 <body>
 <div class="background">
-    <div  class="container">
-        
+    <div class="container">
         <div class="login-container">
             <div class="login-rectangle">
                 <form action="/users/login" method="post">
@@ -22,6 +21,9 @@
                     <input type="password" placeholder="Password" name="password" required>
                     <button type="submit" id="signup-button">SIGN IN</button>
                 </form>
+                <div class="signup-link">
+                    <p class="customer">New customer? Register <a href='/users/new'>here</a></p>
+                </div>
             </div>
             <div class="welcome">
                 <h2 class="main-text">
@@ -31,10 +33,6 @@
                     incididunt ut labore et dolore magna aliqua. </p>
             </div>
         </div>
-        <div class="signup-link">
-            <p class="customer" >New customer? Register <a href='/users/new'>here</a></p>
-        </div>
-        
         
     </div>
 </div>
