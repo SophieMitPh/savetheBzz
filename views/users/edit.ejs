@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8">
     <title>Edit User</title>
-    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/header.css">
     <link rel="stylesheet" type="text/css" href="/css/signUp.css">
     <link href="//fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock+Salt" />
 </head>
 
 <body>
+<%- include ('./../partials/header')%>
 <div class="background">
     <div class="data-form">
         <form method="POST" action="<%=`/users/${user._id}/update?_method=PUT`%>" class="form-container">

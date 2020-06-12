@@ -6,7 +6,7 @@ module.exports = {
 
 	getProductDetailView: (req, res) => {
 		let paramsName = req.params.product;
-		res.render('productDetailView', {product: paramsName});
+		res.render('products/productDetailView', {product: paramsName});
 	},
 
 	getCartView: (req, res) => {

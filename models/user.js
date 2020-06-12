@@ -1,6 +1,6 @@
 const Subscriber = require('../models/subscriber');
 const mongoose = require('mongoose'),
-passportLocalMongoose = require("passport-local-mongoose"),
+	passportLocalMongoose = require('passport-local-mongoose'),
 	userSchema = mongoose.Schema({
 		name: {
 			first: {
@@ -49,9 +49,9 @@ userSchema.virtual('fullName')
 	});
 	
 userSchema.plugin(passportLocalMongoose, {
-	usernameField: "email"
+	usernameField: 'email'
 });
-	  
+
 userSchema.methods.getInfo = function() {
 	return `Name: ${this.name} Email: ${this.email}`;
 };

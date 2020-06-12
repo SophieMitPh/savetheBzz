@@ -120,7 +120,7 @@ module.exports = {
 		Product.find({})
 			.exec()
 			.then((products) => {
-				res.render('productOverview', {
+				res.render('products/productOverview', {
 					products: products
 				});
 			}).catch((error) => {
@@ -134,18 +134,18 @@ module.exports = {
 	getDetailedView: (req, res) => {
 		let productName = req.params.name;
 		Product.findOne({ name: productName })
-		.exec()
-		.then((product) => {
-			res.locals.product = product;
-			res.render("productDetailView",
-			{
-			name: product.name,
-			description: product.description,
-			price: product.price
+			.exec()
+			.then((product) => {
+				res.locals.product = product;
+				res.render('products/productDetailView',
+					{
+						name: product.name,
+						description: product.description,
+						price: product.price
+					});
+			})
+			.catch((error) => {
+				console.log(error.message);
 			});
-		})
-		.catch((error) => {
-			console.log(error.message);
-		})
 	}
 };
