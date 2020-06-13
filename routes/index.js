@@ -1,5 +1,4 @@
 const express = require('express');
-const app = express();
 const router = require('express').Router(),
 	expressValidator = require('express-validator');
 const methodOverride = require('method-override');
@@ -38,18 +37,15 @@ router.use(
 	})
 );
 router.use(methodOverride('_method', {methods: ['POST', 'GET']}));
-router.use(express.json());
 router.use(expressValidator());
-app.set('view engine', 'ejs');
 router.use(layouts);
-app.use(express.static(__dirname + '/public'));
+router.use(expressValidator());
 
 userRoutes = require('./userRoutes'),
 subscriberRoutes = require('./subscriberRoutes'),
 productRoutes = require('./productRoutes'),
-errorRoutes = require('./errorRoutes'),
-homeRoutes = require('./homeRoutes');
-router.use(expressValidator());
+homeRoutes = require('./homeRoutes'),
+errorRoutes = require('./errorRoutes');
 router.use('/users', userRoutes);
 router.use('/subscribers', subscriberRoutes);
 router.use('/products', productRoutes);
