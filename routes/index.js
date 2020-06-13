@@ -44,11 +44,13 @@ router.use(expressValidator());
 userRoutes = require('./userRoutes'),
 subscriberRoutes = require('./subscriberRoutes'),
 productRoutes = require('./productRoutes'),
+	apiRoutes = require('./apiRoutes'),
 homeRoutes = require('./homeRoutes'),
 errorRoutes = require('./errorRoutes');
 router.use('/users', userRoutes);
 router.use('/subscribers', subscriberRoutes);
 router.use('/products', productRoutes);
+router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
 router.use('/', errorRoutes);
 module.exports = router;
