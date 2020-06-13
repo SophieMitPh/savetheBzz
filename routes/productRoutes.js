@@ -1,9 +1,9 @@
 const router = require('express').Router(),
 	productController = require('../controllers/productController');
 
+router.get('/', productController.index, productController.indexView);
 router.get('/productOverview', productController.getAllProducts);
 router.get('/:name', productController.getDetailedView);
-router.get('/', productController.index, productController.indexView);
 router.get('/new', productController.new);
 router.get('/:id', productController.show, productController.showView);
 router.post('/create',
