@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Product Overview</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">    
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" type="text/css" href="/css/products.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rock+Salt" />
@@ -20,7 +21,7 @@
                 <div class="imgBorder">
                     <a href="/products/product/<%= p.name %>"><img class="product-image" src="/images/<%= p.name %>.jpg"></a>
                     <div class="belowpic">
-                    <h2> <%= p.name %></h2>
+                    <h2 id="h2-item-name"> <%= p.name %></h2>
                         <a href="/wishlist"><img class="wishlistIcon" src="/images/wishList.png"></a>
                     </div>
             </div>

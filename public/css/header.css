@@ -54,3 +54,48 @@
     height: 66px;
     width: 68px;
 }
+
+#modal-button {
+    background-color: #ECEE81;
+    color: #625956;
+    border-radius: 3px;
+    border:none;
+    padding:5px;
+    margin-top: 5px;
+  }
+
+  .modal-dialog {
+    background: white;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0px auto;
+  }
+
+  .modal-body {
+    padding: 15px 30px;
+  }
+
+  .add-button {
+    position: absolute;
+    right: 35px;
+    margin-top: 30px;
+    border: 1px solid;
+  }
+  
+  .added-button {
+    position: absolute;
+    right: 35px;
+    margin-top: 30px;
+    background-color: #c1ffc1;
+    color: #625956;
+    border: 1px solid;
+  }
+
+  .modal-title {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Rock Salt, sans-serif;
+    color: #625956;
+    font-weight: 100;
+  }
