@@ -3,8 +3,9 @@ const router = require('express').Router(),
 
 router.get('/', productController.index, productController.indexView);
 router.get('/productOverview', productController.getAllProducts);
-router.get('/:name', productController.getDetailedView);
 router.get('/new', productController.new);
+router.get('/:name', productController.getDetailedView);
+
 router.get('/:id', productController.show, productController.showView);
 router.post('/create',
 	productController.create,
