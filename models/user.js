@@ -1,6 +1,7 @@
 const Subscriber = require('../models/subscriber');
+const randToken = require('rand-token');
 const mongoose = require('mongoose'),
-passportLocalMongoose = require("passport-local-mongoose"),
+	passportLocalMongoose = require('passport-local-mongoose'),
 	userSchema = mongoose.Schema({
 		name: {
 			first: {
@@ -22,6 +23,10 @@ passportLocalMongoose = require("passport-local-mongoose"),
 			required: true,
 			min: [7, 'Your password needs to be at least 7 characters'],
 		},
+		apiToken:
+				{
+					type: String,
+				},
 		wishlistItems: [
 			{
 				type: mongoose.Schema.Types.ObjectId,
@@ -49,9 +54,9 @@ userSchema.virtual('fullName')
 	});
 	
 userSchema.plugin(passportLocalMongoose, {
-	usernameField: "email"
+	usernameField: 'email'
 });
-	  
+
 userSchema.methods.getInfo = function() {
 	return `Name: ${this.name} Email: ${this.email}`;
 };
@@ -67,6 +72,12 @@ userSchema.methods.removeUsers = function() {
 		.remove({name: this.name})
 		.exec();
 };
+
+userSchema.pre('save', function(next) {
+	let user = this;
+	if (!user.apiToken) user.apiToken = randToken.generate(16);
+	next();
+});
 
 userSchema.pre('save', function (next) {
 	let user = this;

@@ -1,3 +1,5 @@
+const httpStatus = require('http-status-codes');
+const User = require('../models/user');
 Product = require('../models/product'),
 getProductParams = (body) => {
 	return {
@@ -120,7 +122,7 @@ module.exports = {
 		Product.find({})
 			.exec()
 			.then((products) => {
-				res.render('productOverview', {
+				res.render('products/productOverview', {
 					products: products
 				});
 			}).catch((error) => {
@@ -134,18 +136,74 @@ module.exports = {
 	getDetailedView: (req, res) => {
 		let productName = req.params.name;
 		Product.findOne({ name: productName })
-		.exec()
-		.then((product) => {
-			res.locals.product = product;
-			res.render("productDetailView",
-			{
-			name: product.name,
-			description: product.description,
-			price: product.price
+			.exec()
+			.then((product) => {
+				res.locals.product = product;
+				res.render('products/productDetailView',
+					{
+						name: product.name,
+						description: product.description,
+						price: product.price
+					});
+			})
+			.catch((error) => {
+				console.log(error.message);
 			});
-		})
-		.catch((error) => {
-			console.log(error.message);
-		})
-	}
+	},
+	respondJSON: (req, res) => {
+		res.json({
+			status: httpStatus.OK,
+			data: res.locals
+		});
+	},
+	errorJSON: (error, req, res, next) => {
+		let errorObject;
+		if (error) {
+			errorObject = {
+				status: httpStatus.INTERNAL_SERVER_ERROR,
+				message: error.message
+			};
+		} else {
+			errorObject = {
+				status: httpStatus.INTERNAL_SERVER_ERROR,
+				message: 'Unknown Error.'
+			};
+		}
+		res.json(errorObject);
+	},
+	add: (req, res, next) => {
+		let productId = req.params.id,
+			currentUser = req.user;
+		if (currentUser) {
+			User.findByIdAndUpdate(currentUser, {
+				$addToSet: {
+					products: productId
+				}
+			})
+				.then(() => {
+					res.locals.success = true;
+					next();
+				})
+				.catch(error => {
+					next(error);
+				});
+		} else {
+			next(new Error('User must log in.'));
+		}
+	},
+	filterUserProducts: (req, res, next) => {
+		let currentUser = res.locals.currentUser;
+		if (currentUser) {
+			let mappedProducts = res.locals.products.map((product) => {
+				let productAdded = currentUser.products.some((userProduct) => {
+					return userProduct.equals(product._id);
+				});
+				return Object.assign(product.toObject(), {added: productAdded});
+			});
+			res.locals.products = mappedProducts;
+			next();
+		} else {
+			next();
+		}
+	},
 };

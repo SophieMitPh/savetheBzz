@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders home correctly 1`] = `
-"<body>
+"<link rel=\\"stylesheet\\" href=\\"/css/bootstrap.css\\">  
+<script type=\\"text/javascript\\" src=\\"/js/jquery.min.js\\"></script>
+<script type=\\"text/javascript\\" src=\\"/js/bootstrap.min.js\\"></script>
+<script type=\\"text/javascript\\"
+        src=\\"/js/bzzApp.js\\"></script>   
+<body>
 <div class=\\"header-rectangle\\">
 <div class=\\"header-elements\\">
         <div class=\\"headline\\">
@@ -15,6 +20,18 @@ exports[`renders home correctly 1`] = `
         </div>
     </div>
 </div>
+<li><button id=\\"modal-button\\" type=\\"button\\" data-toggle=\\"modal\\"
+        data-target=\\"#myModal\\">Added products</button>
+<div id=\\"myModal\\" class=\\"modal fade\\" role=\\"dialog\\">
+    <div class=\\"modal-dialog\\">
+        <h4 class=\\"modal-title\\">Added products:</h4>
+        <div class=\\"modal-body\\">
+        </div>
+        <div class=\\"modal-footer\\">
+            <button type=\\"button\\" data-dismiss=\\"modal\\">Close</button>
+        </div>
+    </div>
+</div></li>
 <div class=\\"flashes\\">
     
      
@@ -43,7 +60,7 @@ exports[`renders home correctly 1`] = `
     </div>
     <div class=\\"button-container\\">
         <div class=\\"button-style\\">
-            <a href=\\"productOverview\\"><button class=\\"w3-button\\">Our products</button></a>
+            <a href=\\"products/productOverview\\"><button class=\\"w3-button\\">Our products</button></a>
         </div>
         <div class=\\"button-style\\">
             <a href=\\"products/new\\"><button class=\\"w3-button\\">Add product!</button></a>

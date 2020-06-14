@@ -22,7 +22,7 @@ describe('Product Index', function () {
 
 		console.log('__________________' + productData.name + '__________________________');
 		request(app)
-			.get('/product/Jeans')
+			.get('/products/product/Jeans')
 			.then((response) => {
 				expect(response.text).toMatchSnapshot();
 				done();

@@ -36,6 +36,7 @@ body {
 
 .imgBorder{
     display: flex;
+    width: 245;
     flex-direction: column;
     justify-content: space-around;
     background: #FDF8F8;
@@ -55,10 +56,13 @@ body {
     width: 220px;
     height: 260px;
 }
-h2 {
+#h2-item-name {
     text-align: center;
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
     margin-top: 14px;
     margin-bottom: 10px;
+    padding: 0 2px;
     color: #404040;
 }
 
@@ -66,6 +70,8 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 90%;
+    margin-top: 3px auto;
 }
 
 .wishlistIcon{

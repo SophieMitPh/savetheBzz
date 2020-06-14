@@ -1,3 +1,4 @@
+const httpStatus = require('http-status-codes');
 const mongoose = require('mongoose'),
 	Subscriber = require('../models/subscriber'),
 	getSubscriberParams = (body) => {
@@ -142,5 +143,26 @@ module.exports = {
 				console.log(`Error deleting subscriber by ID: ${error.message}`);
 				next();
 			});
-	}
+	},
+	respondJSON: (req, res) => {
+		res.json({
+			status: httpStatus.OK,
+			data: res.locals
+		});
+	},
+	errorJSON: (error, req, res, next) => {
+		let errorObject;
+		if (error) {
+			errorObject = {
+				status: httpStatus.INTERNAL_SERVER_ERROR,
+				message: error.message
+			};
+		} else {
+			errorObject = {
+				status: httpStatus.INTERNAL_SERVER_ERROR,
+				message: 'Unknown Error.'
+			};
+		}
+		res.json(errorObject);
+	},
 };
