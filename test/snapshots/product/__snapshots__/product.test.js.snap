@@ -1,61 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Product Index renders product detail page correctly 1`] = `
-"<body>
-<div class=\\"header-rectangle\\">
-<div class=\\"header-elements\\">
-        <div class=\\"headline\\">
-            <a href=\\"/\\"><img id=\\"logo\\" src=\\"/images/logo.png\\" /></a>
-            <h1 id=\\"headerTitle\\">Save the Bzz!</h1>
-        </div>
-        <div class=\\"logos\\">
-            <a href=\\"/users/new\\"><img id=\\"account\\" src=\\"/images/account.png\\" /></a>
-            <a href=\\"/wishlist\\"><img id=\\"wishList\\" src=\\"/images/wishList.png\\" /></a>
-            <a href=\\"/cart\\"><img id=\\"cart\\" src=\\"/images/cart.png\\" /></a>
-        </div>
-    </div>
-</div>
-<div class=\\"flashes\\">
-    
-     
-    
-</div>
-<div class=\\"login\\">
-    
-    <a href=\\"/users/login\\">Log In</a>
-    
-   </div>
-<!DOCTYPE html>
-<html>
-
+"<!DOCTYPE html>
+<html lang=\\"en\\">
 <head>
-    <meta charset=\\"utf-8\\">
-    <title>Product detailed view</title>
-    <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/css/header.css\\">
-    <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/css/product.css\\">
-    <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"//fonts.googleapis.com/css?family=Rock+Salt\\" />
-    <link href=\\"//fonts.googleapis.com/css2?family=Raleway\\" rel=\\"stylesheet\\">
+<meta charset=\\"utf-8\\">
+<title>Error</title>
 </head>
-
 <body>
-    <div class=\\"main\\">
-        <div class=\\"productTitle\\">
-            <h1>Jeans</h1>
-        </div>
-        <div class=\\"detailView\\">
-        <div class=\\"imgBorder\\">
-                <img class=\\"product-image\\" src=\\"/images/Jeans.jpg\\">
-        </div>
-        <div class=\\"description-container\\">
-                <h2>Product info</h2>
-                <p>Some awesome Jeans</p>
-                <h3>Price: 55 €</h3>
-                <button class=\\"add-button\\">ADD TO BAG</button>
-        </div>
-        </div>
-    </div>
+<pre>CastError: Cast to ObjectId failed for value &quot;Jeans&quot; at path &quot;_id&quot; for model &quot;Product&quot;<br> &nbsp; &nbsp;at new CastError (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\mongoose\\\\lib\\\\error\\\\cast.js:29:11)<br> &nbsp; &nbsp;at model.Query.exec (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\mongoose\\\\lib\\\\query.js:4339:21)<br> &nbsp; &nbsp;at model.Query.then (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\mongoose\\\\lib\\\\query.js:4431:15)<br> &nbsp; &nbsp;at show (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\controllers\\\\productController.js:62:5)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)<br> &nbsp; &nbsp;at next (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:137:13)<br> &nbsp; &nbsp;at Route.dispatch (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:112:3)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)<br> &nbsp; &nbsp;at C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:281:22<br> &nbsp; &nbsp;at param (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:354:14)<br> &nbsp; &nbsp;at param (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:365:14)<br> &nbsp; &nbsp;at Function.process_params (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:410:3)<br> &nbsp; &nbsp;at next (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:275:10)<br> &nbsp; &nbsp;at Function.handle (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:174:3)<br> &nbsp; &nbsp;at router (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:47:12)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (C:\\\\Users\\\\MayyaBareeva\\\\Documents\\\\js\\\\savetheBzz\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)</pre>
 </body>
-
 </html>
-</body>"
+"
 `;
