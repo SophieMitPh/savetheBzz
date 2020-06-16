@@ -23,10 +23,6 @@ const mongoose = require('mongoose'),
 			required: true,
 			min: [7, 'Your password needs to be at least 7 characters'],
 		},
-		apiToken:
-				{
-					type: String,
-				},
 		wishlistItems: [
 			{
 				type: mongoose.Schema.Types.ObjectId,

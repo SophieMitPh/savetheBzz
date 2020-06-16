@@ -5,9 +5,7 @@ const router = require('express').Router(),
 
 router.post('/login', usersController
 	.apiAuthenticate);
-
-router.use(usersController.verifyJWT);
-//router.use(usersController.checkAuthSessionOrJwt);
+router.use(usersController.checkAuthSessionOrJwt);
 
 router.get('/products', productController.index,
 	productController.filterUserProducts,

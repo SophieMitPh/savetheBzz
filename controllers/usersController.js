@@ -195,17 +195,6 @@ module.exports = {
 		})(req, res, next);
 	},
 
-	checkAuthSessionOrJwt2: (req, res, next) => {
-		if (req.isAuthenticated() || this.verifyJWT) {
-			next();
-		} else {
-			res.status(httpStatus.UNAUTHORIZED).json({
-				error: true,
-				message: 'Cannot verify API token.'
-			});
-		}
-	},
-
 	checkAuthSessionOrJwt: (req, res, next) => {
 		if (req.isAuthenticated()){ next();}
 		let token = req.headers.token;
