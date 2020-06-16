@@ -3,6 +3,7 @@ const httpStatus = require('http-status-codes');
 const jsonWebToken = require('jsonwebtoken');
 const User = require('../models/user');
 
+
 module.exports = {
 	index: (req, res, next) => {
 		User.find()
@@ -10,9 +11,9 @@ module.exports = {
 				res.locals.users = users;
 				next();
 			}).catch(error => {
-				console.log(`Error fetching users: ${error.message}`);
-				next(error);
-			});
+			console.log(`Error fetching users: ${error.message}`);
+			next(error);
+		});
 	},
 	indexView: (req, res) => {
 		res.render('users/index');
@@ -30,7 +31,7 @@ module.exports = {
 		req.check('email', 'Email is invalid').isEmail();
 		req.check('password', 'Password cannot be empty').notEmpty();
 		req.getValidationResult().then((error) => {
-			if(!error.isEmpty()) {
+			if (!error.isEmpty()) {
 				let messages = error.array().map(e => e.msg);
 				req.skip = true;
 				req.flash('error', messages.join(' and '));
@@ -54,7 +55,7 @@ module.exports = {
 		};
 		let newUser = new User(userParams);
 		User.register(newUser, req.body.password, (e, user) => {
-			if(user) {
+			if (user) {
 				req.flash('success', `${user.fullName}'s account created successfully!`);
 				res.locals.redirect = '/users';
 				//res.locals.user = user;
@@ -64,7 +65,8 @@ module.exports = {
 				res.locals.redirect = '/users/new';
 				next();
 			}
-		});},
+		});
+	},
 	redirectView: (req, res, next) => {
 		let redirectPath = res.locals.redirect;
 		if (redirectPath) res.redirect(redirectPath);
@@ -139,11 +141,11 @@ module.exports = {
 
 	authenticate: passport.authenticate('local', {
 		failureRedirect: '/users/login',
-		failureFlash: 'Failed to login.', 
+		failureFlash: 'Failed to login.',
 		successRedirect: '/',
 		successFlash: 'Logged in!'
 	}),
-	
+
 	logout: (req, res, next) => {
 		req.logout();
 		req.flash('success', 'You have been logged out!');
@@ -194,17 +196,7 @@ module.exports = {
 	},
 
 	checkAuthSessionOrJwt: (req, res, next) => {
-		if (req.isAuthenticated() || this.verifyJWT) {
-			next();
-		} else {
-			res.status(httpStatus.UNAUTHORIZED).json({
-				error: true,
-				message: 'Cannot verify API token.'
-			});
-		}
-	},
-	
-	verifyJWT: (req, res, next) => {
+		if (req.isAuthenticated()){ next();}
 		let token = req.headers.token;
 		if (token) {
 			jsonWebToken.verify(
@@ -229,7 +221,7 @@ module.exports = {
 						});
 						next();
 					}
-				})
+				});
 		}
 	}
-}
+};
