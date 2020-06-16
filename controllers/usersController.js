@@ -192,6 +192,18 @@ module.exports = {
 				});
 		})(req, res, next);
 	},
+
+	checkAuthSessionOrJwt: (req, res, next) => {
+		if (req.isAuthenticated() || this.verifyJWT) {
+			next();
+		} else {
+			res.status(httpStatus.UNAUTHORIZED).json({
+				error: true,
+				message: 'Cannot verify API token.'
+			});
+		}
+	},
+	
 	verifyJWT: (req, res, next) => {
 		let token = req.headers.token;
 		if (token) {
@@ -217,13 +229,7 @@ module.exports = {
 						});
 						next();
 					}
-				}
-			);
-		} else {
-			res.status(httpStatus.UNAUTHORIZED).json({
-				error: true,
-				message: 'Provide Token'
-			});
+				})
 		}
 	}
-};
+}
