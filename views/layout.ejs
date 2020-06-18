@@ -1,30 +1,25 @@
-<link rel="stylesheet" href="/css/bootstrap.css">  
+<link rel="stylesheet" type="text/css" href="/css/layout.css">
+<link rel="stylesheet" href="/css/bootstrap.css">
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-<script type="text/javascript"
-        src="/js/bzzApp.js"></script>   
+<script type="text/javascript" src="/js/bzzApp.js"></script>
+
 <body>
-<%- include ('./partials/header')%>
-<li><%- include ('./partials/_productsModal') %></li>
-<div class="flashes">
-    <% if (flashMessages) { %>
-     <% if (flashMessages.success) { %>
-     <div class="flash success"><%= flashMessages.success %></div>
-     <% } else if (flashMessages.error) { %>
-     <div class="flash error"><%= flashMessages.error %></div>
-     <% } %>
-    <% } %>
-</div>
-<div class="login">
-    <% if (loggedIn) { %>
-   <p>Logged in as
-   <a href="<%=`/users/${currentUser._id}`%>">
-   <%= currentUser.fullName %></a>
-   <a href="/users/logout">Log out</a>
-    </p>
-    <%} else {%>
-    <a href="/users/login">Log In</a>
-    <% } %>
-   </div>
-<%- body %>
+    <%- include ('./partials/header')%>
+    <li><%- include ('./partials/_productsModal') %></li>
+    <div class="flashes">
+        <% if (flashMessages) { %>
+        <% if (flashMessages.success) { %>
+        <div class="flash success"><%= flashMessages.success %></div>
+        <% } else if (flashMessages.error) { %>
+        <div class="flash error"><%= flashMessages.error %></div>
+        <% } %>
+        <% } %>
+    </div>
+    <div class="logout">
+        <% if (loggedIn) { %>
+        <a href="/users/logout">Log out</a>
+        <% } %>
+    </div>
+    <%- body %>
 </body>

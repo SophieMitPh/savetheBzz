@@ -25,7 +25,8 @@ body {
 .pageTitle {
     display: flex;
     flex-direction: row;
-    margin-left: 450px;
+    justify-content: center;
+    margin-bottom: 30px;
     font-family: Rock Salt, sans-serif;
     font-style: normal;
     font-weight: normal;

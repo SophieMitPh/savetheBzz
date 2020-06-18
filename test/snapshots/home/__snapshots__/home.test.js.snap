@@ -1,26 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders home correctly 1`] = `
-"<link rel=\\"stylesheet\\" href=\\"/css/bootstrap.css\\">  
+"<link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/css/layout.css\\">
+<link rel=\\"stylesheet\\" href=\\"/css/bootstrap.css\\">
 <script type=\\"text/javascript\\" src=\\"/js/jquery.min.js\\"></script>
 <script type=\\"text/javascript\\" src=\\"/js/bootstrap.min.js\\"></script>
-<script type=\\"text/javascript\\"
-        src=\\"/js/bzzApp.js\\"></script>   
+<script type=\\"text/javascript\\" src=\\"/js/bzzApp.js\\"></script>
+
 <body>
-<div class=\\"header-rectangle\\">
-<div class=\\"header-elements\\">
+    <div class=\\"header-rectangle\\">
+    <div class=\\"header-elements\\">
         <div class=\\"headline\\">
             <a href=\\"/\\"><img id=\\"logo\\" src=\\"/images/logo.png\\" /></a>
             <h1 id=\\"headerTitle\\">Save the Bzz!</h1>
         </div>
         <div class=\\"logos\\">
-            <a href=\\"/users/new\\"><img id=\\"account\\" src=\\"/images/account.png\\" /></a>
+            <div class=\\"login\\">
+                
+                <a href=\\"/users/login\\">Log In</a>
+                <a href=\\"/users/login\\"><img id=\\"account\\" src=\\"/images/account.png\\" /></a>
+                
+            </div>
             <a href=\\"/wishlist\\"><img id=\\"wishList\\" src=\\"/images/wishList.png\\" /></a>
             <a href=\\"/cart\\"><img id=\\"cart\\" src=\\"/images/cart.png\\" /></a>
         </div>
     </div>
 </div>
-<li><button id=\\"modal-button\\" type=\\"button\\" data-toggle=\\"modal\\"
+    <li><button id=\\"modal-button\\" type=\\"button\\" data-toggle=\\"modal\\"
         data-target=\\"#myModal\\">Added products</button>
 <div id=\\"myModal\\" class=\\"modal fade\\" role=\\"dialog\\">
     <div class=\\"modal-dialog\\">
@@ -32,17 +38,15 @@ exports[`renders home correctly 1`] = `
         </div>
     </div>
 </div></li>
-<div class=\\"flashes\\">
-    
-     
-    
-</div>
-<div class=\\"login\\">
-    
-    <a href=\\"/users/login\\">Log In</a>
-    
-   </div>
-<!DOCTYPE html>
+    <div class=\\"flashes\\">
+        
+        
+        
+    </div>
+    <div class=\\"logout\\">
+        
+    </div>
+    <!DOCTYPE html>
 <html>
 
 <head>
