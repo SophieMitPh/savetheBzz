@@ -13,6 +13,9 @@ db.once('open', () => {
 	console.log('Successfully connected to MongoDB using Mongoose!');
 });
 
-app.listen(app.get('port'), () => {
+const server = app.listen(app.get('port'), () => {
 	console.log(`The express server has started on port ${app.get('port')}`);
-});
+}),
+	//require the socket.io module. + pass instance of http server.
+	io = require("socket.io")(server);
+const chatController = require("./controllers/chatController")(io);

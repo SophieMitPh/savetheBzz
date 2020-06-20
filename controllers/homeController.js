@@ -83,4 +83,8 @@ module.exports = {
 		}
 		res.json(errorObject);
 	},
+
+	chat: (req, res) => {
+		res.render("chat");
+	}
 };
