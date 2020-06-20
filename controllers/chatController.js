@@ -1,7 +1,7 @@
 const Message = require("../models/message");
 
 module.exports = io => {
-    io.on("conneciton", client => {
+    io.on("connection", client => {
         Message.find({})
             .sort({
                 createdAt: -1
@@ -9,14 +9,14 @@ module.exports = io => {
             .limit(10)
             .then(messages => {
                 client.emit("load all messages", messages.reverse());
-            })
+            });
 
         console.log("new connection...");
 
         client.on("disconnect", () => {
             console.log("User is disconnected");
         });
-        
+
         client.on("message", data => {
             let messageAttributes = {
                 content: data.content,
