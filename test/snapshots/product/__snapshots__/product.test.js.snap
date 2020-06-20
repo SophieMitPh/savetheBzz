@@ -5,6 +5,7 @@ exports[`Product Index renders product detail page correctly 1`] = `
 <link rel=\\"stylesheet\\" href=\\"/css/bootstrap.css\\">
 <script type=\\"text/javascript\\" src=\\"/js/jquery.min.js\\"></script>
 <script type=\\"text/javascript\\" src=\\"/js/bootstrap.min.js\\"></script>
+<script src=\\"/socket.io/socket.io.js\\"></script>
 <script type=\\"text/javascript\\" src=\\"/js/bzzApp.js\\"></script>
 
 <body>
@@ -23,6 +24,7 @@ exports[`Product Index renders product detail page correctly 1`] = `
             </div>
             <a href=\\"/wishlist\\"><img id=\\"wishList\\" src=\\"/images/wishList.png\\" /></a>
             <a href=\\"/cart\\"><img id=\\"cart\\" src=\\"/images/cart.png\\" /></a>
+            <a href=\\"/chat\\" class=\\"chat-icon\\"><img id=\\"chat\\" src=\\"/images/chat.png\\" /></a>
         </div>
     </div>
 </div>
@@ -43,8 +45,7 @@ exports[`Product Index renders product detail page correctly 1`] = `
         
         
     </div>
-    <div class=\\"logout\\">
-        
+    
     </div>
     <!DOCTYPE html>
 <html>
