@@ -1,5 +1,5 @@
 const httpStatus = require('http-status-codes');
-
+const User = require('../models/user');
 module.exports = {
 	getIndexPage: (req, res) => {
 		res.render('home');
@@ -18,16 +18,49 @@ module.exports = {
 		res.render('wishList');
 	},
 
-	getPersonalAccount: (req, res) => {
-		res.render('account/account');
+	getPersonalAccount: (req, res, next) => {
+			let userId = req.params.id;
+			User.findById(userId)
+				.then(user => {
+					res.locals.user = user;
+					res.render('account/account', {
+						user: user
+					});
+				})
+				.catch(error => {
+					console.log(`Error fetching user by ID: ${error.message}`);
+					next(error);
+				});
 	},
 
 	getShippingAddress: (req, res) => {
-		res.render('account/address');
+		let userId = req.params.id;
+			User.findById(userId)
+				.then(user => {
+					res.locals.user = user;
+					res.render('account/address', {
+						user: user
+					});
+				})
+				.catch(error => {
+					console.log(`Error fetching user by ID: ${error.message}`);
+					next(error);
+				});
 	},
 
 	getPaymentMethods: (req, res) => {
-		res.render('account/payment');
+		let userId = req.params.id;
+		User.findById(userId)
+			.then(user => {
+				res.locals.user = user;
+				res.render('account/payment', {
+					user: user
+				});
+			})
+			.catch(error => {
+				console.log(`Error fetching user by ID: ${error.message}`);
+				next(error);
+			});
 	},
 	respondJSON: (req, res) => {
 		res.json({
@@ -50,4 +83,8 @@ module.exports = {
 		}
 		res.json(errorObject);
 	},
+
+	chat: (req, res) => {
+		res.render("chat");
+	}
 };

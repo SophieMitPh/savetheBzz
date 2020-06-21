@@ -18,12 +18,12 @@
         <div>
             <div class="username">
                 <img id="account-logo" src="/images/account.png">
-                <h2 id="greeting">Hi, username </h2>
+                <h2 id="greeting">Hi, <%= user.fullName %> </h2>
             </div>
             <div class="sections">
-                <a href="/my-account/profile">My details</a>
-                <a href="/my-account/address">My address book</a>
-                <a href="/my-account/payment" class="active">My payment methods</a>
+                <a href="<%=`/${user._id}/my-account/profile` %>">My details</a>
+                <a href="<%=`/${user._id}/my-account/address` %>">My address book</a>
+                <a href="<%=`/${user._id}/my-account/payment` %>" class="active">My payment methods</a>
             </div>
         </div>
         <div>

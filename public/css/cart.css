@@ -215,3 +215,30 @@ thead tr {
     font-size: 20px;
     font-family: Raleway;
 }
+
+#chat-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 50%;
+    height: 70%;
+    background: #FDF8F8;
+    border: 5px solid rgb(189, 187, 187);
+    border-radius: 5px;
+    font-family: Raleway;
+    font-size: 16px;
+}
+
+#chat {
+    width: 95%;
+    height: 70%;
+    margin-top: 10px;
+    border: 1px solid #635956;
+    overflow: scroll;
+  }
+  
+  #chat li {
+    text-decoration: none;
+    list-style: none;
+    padding: 10px;
+  }

@@ -55,6 +55,13 @@
     width: 68px;
 }
 
+#chat-icon-header{
+  align-self: center;
+  margin-top: 5px;
+  height: 50px;
+  width: 52px;
+}
+
 #modal-button {
     background-color: #ECEE81;
     color: #625956;
@@ -98,4 +105,8 @@
     font-family: Rock Salt, sans-serif;
     color: #625956;
     font-weight: 100;
+  }
+
+  .login {
+    font-family: Raleway;
   }

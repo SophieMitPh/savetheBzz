@@ -1,13 +1,25 @@
 <div class="header-rectangle">
-<div class="header-elements">
+    <div class="header-elements">
         <div class="headline">
             <a href="/"><img id="logo" src="/images/logo.png" /></a>
             <h1 id="headerTitle">Save the Bzz!</h1>
         </div>
         <div class="logos">
-            <a href="/users/new"><img id="account" src="/images/account.png" /></a>
+            <div class="login">
+                <% if (loggedIn) { %>
+                <p>Logged in as
+                    <%= currentUser.fullName %>
+                    <a href="<%=`/${currentUser._id}/my-account/profile`%>"><img id="account"
+                            src="/images/account.png" />
+                </p>
+                <%} else {%>
+                <a href="/users/login">Log In</a>
+                <a href="/users/login"><img id="account" src="/images/account.png" /></a>
+                <% } %>
+            </div>
             <a href="/wishlist"><img id="wishList" src="/images/wishList.png" /></a>
             <a href="/cart"><img id="cart" src="/images/cart.png" /></a>
+            <a href="/chat" class="chat-icon"><img id="chat-icon-header" src="/images/chat.png" /></a>
         </div>
     </div>
 </div>
