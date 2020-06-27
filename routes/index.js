@@ -5,9 +5,11 @@ const methodOverride = require('method-override');
 const layouts = require('express-ejs-layouts');
 const passport = require('passport');
 const cookie = require('cookie-parser');
+const mongoose = require('mongoose');
 const session = require('express-session');
 const User = require('./../models/user'),
 	connectFlash = require('connect-flash');
+var MongoStore = require('connect-mongo')(session);
 
 router.use(cookie('secretCodeBzz'));
 router.use(session({
@@ -16,7 +18,8 @@ router.use(session({
 		maxAge: 4000000
 	},
 	resave: false,
-	saveUninitialized: false
+	saveUninitialized: false,
+	store: new MongoStore({mongooseConnection: mongoose.connection})
 }));
 
 router.use(passport.initialize());
@@ -29,6 +32,7 @@ router.use((req, res, next) => {
 	res.locals.flashMessages = req.flash();
 	res.locals.loggedIn = req.isAuthenticated();
 	res.locals.currentUser = req.user;
+	res.locals.session = req.session;
 	next();
 });
 router.use(
