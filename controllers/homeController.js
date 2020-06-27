@@ -1,5 +1,9 @@
 const httpStatus = require('http-status-codes');
 const User = require('../models/user');
+const Cart = require('../models/cart')
+const Product = require('../models/product')
+const Wishlist = require('../models/wishlist')
+
 module.exports = {
 	getIndexPage: (req, res) => {
 		res.render('home');
@@ -10,12 +14,56 @@ module.exports = {
 		res.render('products/productDetailView', {product: paramsName});
 	},
 
-	getCartView: (req, res) => {
-		res.render('cart');
+	getCartView: (req, res, next) => {
+		if(!req.session.cart){
+			return res.render('cart', {products: null})
+		}
+		var cart = new Cart(req.session.cart)
+		res.render('cart', {
+			products: cart.generateArray(),
+			totalPrice: cart.totalPrice
+		})
 	},
 
-	getWishList: (req, res) => {
-		res.render('wishList');
+	addProductToCart: (req, res, next) => {
+		var productId = req.params.id;
+		var cart = new Cart (req.session.cart ? req.session.cart : {});
+	
+		Product.findById(productId, (err, product) => {
+			if(err) {
+				return res.redirect('/cart');
+			}
+			cart.add(product, product.id);
+			req.session.cart = cart;
+			console.log(req.session.cart);
+			res.redirect('/cart');
+		});
+	},
+
+	getWishList: (req, res, next) => {
+		if(!req.session.wishlist){
+			console.log("no products in wishlist")
+			return res.render('wishList', {products: null})
+		}
+		var wishlist = new Wishlist(req.session.wishlist)
+		res.render('wishList', {
+			products: wishlist.generateArray()
+		})
+	},
+
+	addProductToWishlist: (req, res, next) => {
+		var productId = req.params.id;
+		var wishlist = new Wishlist(req.session.wishlist ? req.session.wishlist : {});
+	
+		Product.findById(productId, (err, product) => {
+			if (err) {
+				return res.redirect('/wishlist');
+			}
+			wishlist.add(product, product.id);
+			req.session.wishlist = wishlist;
+			console.log(req.session.wishlist);
+			res.redirect('/wishlist');
+		});
 	},
 
 	getPersonalAccount: (req, res, next) => {
