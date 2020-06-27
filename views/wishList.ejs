@@ -15,75 +15,38 @@
         <div class="pageTitle">
             <h1>Your wish list</h1>
         </div>
+        <% if (products) { %>
         <div class="cart-container">
             <div class="added-products">
+                <% products.forEach( p =>  { %>
                 <div class="flex-container">
-                    <div class="productTitle">
-                        <h2>Product</h2>
+                    <div class="product">
+                        <h2 class="productTitle"><%= p.item.name %></h2>
+                    </div>
+                    <div class="quantity">
+                        <h3>Price</h3>
+                    </div>
+                    <div class="amount">
+                        <p><%= p.price %></p>
                     </div>
                     <div class="quantity">
                         <h3>Qty</h3>
                     </div>
                     <div class="amount">
-                        <select id="selector">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
+                        <p><%= p.qty %></p>
                     </div>
                     <div class="trash">
                         <img class="bin" src="/images/trash.png"/>
                     </div>
                 </div>
-
-                <div class="flex-container">
-                    <div class="productTitle">
-                        <h2>Product</h2>
-                    </div>
-                    <div class="quantity">
-                        <h3>Qty</h3>
-                    </div>
-                    <div class="amount">
-                        <select id="selector">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                    </div>
-                    <div class="trash">
-                        <img class="bin" src="/images/trash.png" />
-                    </div>
-                </div>
-
-                <div class="flex-container">
-                    <div class="productTitle">
-                        <h2>Product</h2>
-                    </div>
-                    <div class="quantity">
-                        <h3>Qty</h3>
-                    </div>
-                    <div class="amount">
-                        <select id="selector">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                    </div>
-                    <div class="trash">
-                        <img class="bin" src="/images/trash.png" />
-                    </div>
-                </div>
+                <% }); %>
             </div>
         </div>
+        <% } else {%>
+            <div class="cart-container">
+            <h2 class="emptyCart">Sorry, your wishlist is empty...</h2>
+            </div>
+        <% } %>
     </div>
 </body>
 

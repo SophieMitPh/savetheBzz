@@ -1,6 +1,7 @@
 const router = require('express').Router(),
 	homeController = require('../controllers/homeController');
 const Cart = require('../models/cart')
+const Wishlist = require('../models/wishlist')
 const Product = require('../models/product');
 router.get('/', homeController.getIndexPage);
 router.get('/chat', homeController.chat);
@@ -29,7 +30,32 @@ router.get('/cart/add/:id', function(req, res, next){
 		res.redirect('/cart');
 	});
 });
-router.get('/wishlist', homeController.getWishList);
+
+router.get('/wishlist', (req, res, next) => {
+	if(!req.session.wishlist){
+		console.log("no products in wishlist")
+		return res.render('wishList', {products: null})
+	}
+	var wishlist = new Wishlist(req.session.wishlist)
+	res.render('wishList', {
+		products: wishlist.generateArray()
+	})
+});
+
+router.get('/wishlist/add/:id', function (req, res, next) {
+	var productId = req.params.id;
+	var wishlist = new Wishlist(req.session.wishlist ? req.session.wishlist : {});
+
+	Product.findById(productId, (err, product) => {
+		if (err) {
+			return res.redirect('/wishlist');
+		}
+		wishlist.add(product, product.id);
+		req.session.wishlist = wishlist;
+		console.log(req.session.wishlist);
+		res.redirect('/wishlist');
+	});
+});
 router.get('/:id/my-account/profile', homeController.getPersonalAccount);
 router.get('/:id/my-account/address', homeController.getShippingAddress);
 router.get('/:id/my-account/payment', homeController.getPaymentMethods);

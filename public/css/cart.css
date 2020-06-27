@@ -61,8 +61,7 @@ body {
 }
 
 .product {
-    width: 84px;
-    height: 38px;
+    width: 150px;
     line-height: 28px;
     
 }
@@ -70,20 +69,20 @@ body {
 .productTitle {
     font-family: Raleway;
     font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    margin-left: 5px;
-    padding-top: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+    padding-top: 2px;
 }
 
 .quantity {
     font-family: Raleway;
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 18px;
     opacity: 0.8;
-    margin-left: 100px;
-    padding-left: 100px;
+    margin-left: 50px;
+    padding-left: 20px;
 }
 
 select {
@@ -99,11 +98,14 @@ select {
 }
 
 .amount {
-    line-height: 80px;
+    line-height: 75px;
     margin-right: 20px;
     margin-left: 0px;
 }
-
+.amount p {
+    font-size: 18px;
+    font-weight: 500;
+}
 .trash {
     margin-right: 30px;
     margin-top: 25px;

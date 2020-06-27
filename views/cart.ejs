@@ -15,6 +15,7 @@
         <div class="pageTitle">
             <h1>Your bag</h1>
         </div>
+        <% if (products) { %>
         <div class="cart-container">
             <div class="added-products">
                 <% products.forEach( p =>  { %>
@@ -49,6 +50,11 @@
                 <button class="checkout">GO TO CHECKOUT</button>
             </div>
         </div>
+        <% } else {%>
+            <div class="cart-container">
+            <h2 class="emptyCart">Sorry, your cart is empty...</h2>
+            </div>
+        <% } %>
     </div>
 </body>
 
