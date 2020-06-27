@@ -19,8 +19,8 @@
             <div class="added-products">
                 <% products.forEach( p =>  { %>
                 <div class="flex-container">
-                    <div class="productTitle">
-                        <h2><%= p.item.title %></h2>
+                    <div class="product">
+                        <h2 class="productTitle"><%= p.item.name %></h2>
                     </div>
                     <div class="quantity">
                         <h3>Qty</h3>
@@ -43,7 +43,7 @@
                         <h4>Subtotal</h4>
                     </div>
                     <div class="price">
-                        <p>100 €</p>
+                        <p><%= totalPrice %></p>
                     </div>
                 </div>
                 <button class="checkout">GO TO CHECKOUT</button>
