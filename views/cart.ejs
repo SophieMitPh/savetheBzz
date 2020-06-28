@@ -12,76 +12,31 @@
 
 <body class="body">
     <div class="main">
+        
         <div class="pageTitle">
             <h1>Your bag</h1>
         </div>
+        <% if (products) { %>
         <div class="cart-container">
             <div class="added-products">
+                <% products.forEach( p =>  { %>
                 <div class="flex-container">
-                    <div class="productTitle">
-                        <h2>Product</h2>
+                    <div class="product">
+                        <h2 class="productTitle"><%= p.item.name %></h2>
                     </div>
                     <div class="quantity">
                         <h3>Qty</h3>
                     </div>
                     <div class="amount">
-                        <select id="selector">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
+                        <p><%= p.qty %></p>
                     </div>
                     <div class="trash">
-                        <img class="bin" src="/images/trash.png"/>
+                        <a href="<%=`/cart/remove/${p.item._id}`%>">
+                            <img class="bin" src="/images/trash.png" />
+                        </a>
                     </div>
                 </div>
-
-                <div class="flex-container">
-                    <div class="productTitle">
-                        <h2>Product</h2>
-                    </div>
-                    <div class="quantity">
-                        <h3>Qty</h3>
-                    </div>
-                    <div class="amount">
-                        <select id="selector">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                    </div>
-                    <div class="trash">
-                        <img class="bin" src="/images/trash.png" />
-                    </div>
-                </div>
-
-                <div class="flex-container">
-                    <div class="productTitle">
-                        <h2>Product</h2>
-                    </div>
-                    <div class="quantity">
-                        <h3>Qty</h3>
-                    </div>
-                    <div class="amount">
-                        <select id="selector">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                    </div>
-                    <div class="trash">
-                        <img class="bin" src="/images/trash.png" />
-                    </div>
-                </div>
+                <% }); %>
             </div>
             <div class="total-box">
                 <div class="total">
@@ -92,12 +47,17 @@
                         <h4>Subtotal</h4>
                     </div>
                     <div class="price">
-                        <p>100 €</p>
+                        <p><%= totalPrice %></p>
                     </div>
                 </div>
                 <button class="checkout">GO TO CHECKOUT</button>
             </div>
         </div>
+        <% } else {%>
+            <div class="cart-container-empty">
+            <h2 class="emptyCart">Sorry, your cart is empty...</h2>
+            </div>
+        <% } %>
     </div>
 </body>
 

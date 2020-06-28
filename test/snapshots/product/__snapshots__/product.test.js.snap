@@ -73,7 +73,7 @@ exports[`Product Index renders product detail page correctly 1`] = `
                 <h2>Product info</h2>
                 <p>Some awesome Jeans</p>
                 <h3>Price: 55 €</h3>
-                <button class=\\"add-button\\">ADD TO BAG</button>
+                <a href=\\"/cart/add/5ef8d1ef6a022c254a30ad9f\\"><button class=\\"add-button\\">ADD TO BAG</button></a>
         </div>
         </div>
     </div>
@@ -94,6 +94,8 @@ exports[`Product Index renders product detail page correctly 1`] = `
         </div>
         <div>
             <p><a class=\\"footer-link\\" href=\\"subscribers/new\\">Newsletter</a></p>
+            <p><a class=\\"footer-link\\" href=\\"/cart\\">Your cart</a></p>
+            <p><a class=\\"footer-link\\" href=\\"/wishlist\\">Your wishlist</a></p>
         </div>
     </div>
 </footer>

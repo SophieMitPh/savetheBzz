@@ -91,6 +91,8 @@ exports[`renders home correctly 1`] = `
         </div>
         <div>
             <p><a class=\\"footer-link\\" href=\\"subscribers/new\\">Newsletter</a></p>
+            <p><a class=\\"footer-link\\" href=\\"/cart\\">Your cart</a></p>
+            <p><a class=\\"footer-link\\" href=\\"/wishlist\\">Your wishlist</a></p>
         </div>
     </div>
 </footer>
