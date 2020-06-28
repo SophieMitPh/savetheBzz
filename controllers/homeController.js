@@ -39,6 +39,15 @@ module.exports = {
 			res.redirect('/cart');
 		});
 	},
+	
+	removeProductFromCart: (req, res, next) => {
+		var productId = req.params.id;
+		var cart = new Cart(req.session.cart ? req.session.cart : {});
+		cart.remove(productId);
+		req.session.cart = cart;
+		console.log(req.session.cart);
+		res.redirect('/cart');
+	},
 
 	getWishList: (req, res, next) => {
 		if(!req.session.wishlist){

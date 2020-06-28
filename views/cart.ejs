@@ -12,6 +12,7 @@
 
 <body class="body">
     <div class="main">
+        
         <div class="pageTitle">
             <h1>Your bag</h1>
         </div>
@@ -30,7 +31,9 @@
                         <p><%= p.qty %></p>
                     </div>
                     <div class="trash">
-                        <img class="bin" src="/images/trash.png"/>
+                        <a href="<%=`/cart/remove/${p.item._id}`%>">
+                            <img class="bin" src="/images/trash.png" />
+                        </a>
                     </div>
                 </div>
                 <% }); %>
@@ -51,7 +54,7 @@
             </div>
         </div>
         <% } else {%>
-            <div class="cart-container">
+            <div class="cart-container-empty">
             <h2 class="emptyCart">Sorry, your cart is empty...</h2>
             </div>
         <% } %>

@@ -8,6 +8,7 @@ router.get('/chat', homeController.chat);
 
 router.get('/cart', homeController.getCartView);
 router.get('/cart/add/:id', homeController.addProductToCart);
+router.get('/cart/remove/:id', homeController.removeProductFromCart);
 router.get('/wishlist', homeController.getWishList);
 router.get('/wishlist/add/:id', homeController.addProductToWishlist);
 router.get('/:id/my-account/profile', homeController.getPersonalAccount);

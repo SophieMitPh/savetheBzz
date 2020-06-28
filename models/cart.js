@@ -13,9 +13,22 @@ module.exports =function Cart(oldCart) {
             }
         }
         storedItem.qty++
+        this.totalQty++
         storedItem.price = storedItem.item.price * storedItem.qty;
         this.totalPrice += storedItem.item.price;
     };
+
+    this.remove = (id) => {
+        this.items[id].qty--
+        this.items[id].price -= this.items[id].item.price;
+        this.totalQty--;
+        this.totalPrice -= this.items[id].item.price
+    
+        if (this.items[id].qty <= 0) {
+            delete this.items[id];
+        }
+    
+    }
 
     this.generateArray = function() {
         var arr = [];

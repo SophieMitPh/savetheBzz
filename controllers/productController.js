@@ -140,7 +140,7 @@ module.exports = {
 			.then((product) => {
 				res.locals.product = product;
 				res.render('products/productDetailView',
-					{
+					{	
 						name: product.name,
 						description: product.description,
 						price: product.price
