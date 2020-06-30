@@ -188,17 +188,18 @@ module.exports = {
 					success: true,
 					token: signedToken
 				});
-			} else
+			} else{
 				res.json({
 					success: false,
 					message: 'Could not authenticate user.'
 				});
-		})(req, res, next);
+			}
+				
+		});
 	},
 
 	checkAuthSessionOrJwt: (req, res, next) => {
-		if (req.isAuthenticated()){ next();}
-		let token = req.headers.token;
+		const token = req.headers.token;
 		if (token) {
 			jsonWebToken.verify(
 				token,
