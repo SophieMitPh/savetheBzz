@@ -1,6 +1,7 @@
 process.env.NODE_ENV = "test" 
 const Product = require('../models/product')
 const Subscriber = require('../models/subscriber')
+const User = require('../models/user')
 const request = require('supertest')
 const app = require('../app')
 const mongoose = require('mongoose')
@@ -26,6 +27,7 @@ afterAll(async () => {
 module.exports = {
   Product: Product,
   Subscriber: Subscriber,
+  User: User,
   app: app,
   request: request,
   supertest: request,

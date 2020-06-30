@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/SophieMitPh/savetheBzz#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bootstrap": "^3.4.1",
     "bootstrap-select": "^1.13.17",
     "connect-flash": "^0.1.1",
@@ -43,6 +44,7 @@
     "passport": "^0.4.1",
     "passport-local-mongoose": "^6.0.1",
     "rand-token": "^1.0.1",
+    "random-email": "^1.0.3",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
