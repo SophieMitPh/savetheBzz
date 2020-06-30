@@ -157,6 +157,7 @@ module.exports = {
 			status: httpStatus.OK,
 			data: res.locals
 		});
+		
 	},
 	errorJSON: (error, req, res, next) => {
 		let errorObject;
