@@ -42,7 +42,7 @@ describe('Creates and saves the product', () => {
                     .then(result => {
                         console.log(result)
                         expect(result.length).toBe(2)
-                        expect(result[0]).toHaveProperty('_id')
+                        expect(result[1]).toHaveProperty('_id')
                         done()
                     })
             })
