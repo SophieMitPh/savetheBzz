@@ -1,30 +1,54 @@
-const {app, Product, request} = require('../../commonJest');
-describe('productController', () => {
-	let productItems;
-	beforeEach(async () => {
-		productItems = await Promise.all([
-			Product.create({name: 'shirt123', price: 25, description: '100% cotton T-shirt'}),
-			Product.create({name: 'Silk blouse', price: 60, description: 'Beige silk blouse'}),
-			Product.create({name: 'Leather skirt', price: 59, description: 'faux leather skirt'})   
-		]);
-	});
+const { Product, app, request} =  require ('../../commonJest');
+const { IM_A_TEAPOT, EXPECTATION_FAILED } = require('http-status-codes');
+const { TestScheduler } = require('jest');
 
-	describe('product list', () => {
-		it('show ok on /products', ((done) => {
-			request(app)
-				.get('/products')
-				.expect(200, done);
-		}));
-		it('show all products in db',  ((done) => {
-			request(app)
-				.get('/products')
-				.then((res) => {
-					const body = res.text;
-					for(const product of productItems){
-						expect(body).toContain(product.name);
-					}
-					done();
-				});
-		}));
-	});
-});
+/*const id = () => {
+    return (Math.ceil(Math.random() * 1000000)).toString()
+  };*/
+
+let productData
+
+describe('Creates and saves the product', () => {
+    beforeEach(() => {
+        productData = {
+            name: 'Black shorts',
+            price: 25,
+            description: 'Shorts made out of bio-cotton.'
+        }
+    })
+
+    it('save the product directly', (done) => {
+        const testProduct = new Product(productData)
+        testProduct.save()
+            .then(() => {
+                Product.find({ name: productData.name })
+                    .then(result => {
+                        expect(result.length).toBe(1)
+                        expect(result[0]).toHaveProperty('_id')
+                        done()
+                    })
+            })
+            .catch((error) => {
+                done(error.message)
+            })
+    })
+
+    it('create product via post request', (done) => {
+        request(app)
+            .post('/products/create')
+            .send(productData)
+            .then( res => {
+                Product.find({ name: productData.name})
+                    .then(result => {
+                        console.log(result)
+                        expect(result.length).toBe(2)
+                        expect(result[0]).toHaveProperty('_id')
+                        done()
+                    })
+            })
+            .catch((error) => {
+                done(error.message)
+            })
+    })
+})
+
