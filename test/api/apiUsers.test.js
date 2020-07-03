@@ -64,7 +64,7 @@ describe('API: user list', () => {
         done()
       })
   })
-/*  it('does return error if no token is provided', (done) => {
+ /* it('does return error if no token is provided', (done) => {
     request(app)
       .get('/api/users')
       .then((response) => {
@@ -73,6 +73,7 @@ describe('API: user list', () => {
         done()
       })
   })*/
+  
   it('show all courses in db', async function (done) {
     const jwt = await getJWT(userData[0])
     request(app)

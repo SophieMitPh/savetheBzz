@@ -196,7 +196,7 @@ module.exports = {
 				});
 			}
 				
-		});
+		})(req, res, next);;
 	},
 
 	checkAuthSessionOrJwt: (req, res, next) => {
