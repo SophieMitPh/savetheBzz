@@ -1,5 +1,6 @@
 const {app, User, request} = require('../../commonJest');
-var randomEmail = require('random-email');
+var faker = require('faker');
+
 describe('userController', () => {
 	let UserItems;
 	beforeEach(async () => {
@@ -7,20 +8,20 @@ describe('userController', () => {
             User.create({
                 name:
                 {
-                    first: 'Bob',
-                    last: 'Middleton'
+                    first: faker.name.firstName(),
+                    last: faker.name.lastName()
                 },
-                email: randomEmail({ domain: 'example.com' }),
-                password: 'asdfghj23rkl'
+                email: faker.internet.email(),
+                password: faker.internet.password()
             }),
 			User.create({
                 name:
                 {
-                    first: 'Mary',
-                    last: 'Kate'
+                    first: faker.name.firstName(),
+                    last: faker.name.lastName()
                 },
-                email: randomEmail({ domain: 'example.com' }),
-                password: 'asdwe34t423fwel'
+                email: faker.internet.email(),
+                password: faker.internet.password()
             }),
 		]);
 	});

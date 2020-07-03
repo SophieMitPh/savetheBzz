@@ -1,17 +1,19 @@
 const { app, User, request } = require('../../commonJest');
-var randomEmail = require('random-email');
+var faker = require('faker');
+
 const agent = request.agent(app)
+
 const user = {
   name: {
-    first: "Kate",
-    last: "Brown"
+    first: faker.name.firstName(),
+    last: faker.name.lastName()
   },
-  email: 'bob.miller@example.com',
-  password: 'bobmiller'
+  email: faker.internet.email(),
+  password: faker.internet.password()
 };
 let userRegistered;
 
-describe('register the user', () => {
+describe('Register the user and check authentification', () => {
   beforeAll(async (done) => {
     userRegistered = new User(user)
     User.register(userRegistered, user.password, (error, user) => {
@@ -28,7 +30,7 @@ describe('register the user', () => {
     })
   })
 
-  test('is authenticated', (done) => {
+  test('user is authenticated', (done) => {
     agent
       .get('/')
       .then((res) => {
