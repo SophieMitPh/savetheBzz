@@ -10,12 +10,12 @@ describe('productController', () => {
 	});
 
 	describe('product list', () => {
-		it('show ok on /products', ((done) => {
+		it('show ok on /products', (done) => {
 			request(app)
 				.get('/products')
 				.expect(200, done);
-		}));
-		it('show all products in db',  ((done) => {
+		});
+		it('show all products in db', (done) => {
 			request(app)
 				.get('/products')
 				.then((res) => {
@@ -25,6 +25,6 @@ describe('productController', () => {
 					}
 					done();
 				});
-		}));
+		});
 	});
 });

@@ -32,7 +32,7 @@ describe('userController', () => {
 				.get('/users')
 				.expect(200, done);
 		}));
-		it('show all Users in db',  ((done) => {
+		it('show all Users in db',  (done) => {
 			request(app)
 				.get('/users')
 				.then((res) => {
@@ -43,6 +43,6 @@ describe('userController', () => {
 					}
 					done();
 				});
-		}));
+		});
 	});
 });

@@ -35,7 +35,6 @@ describe('Creates and saves the subscriber', () => {
             .then(res => {
                 Subscriber.find({ email: subscriberData.email })
                     .then(result => {
-                        console.log(result)
                         expect(result.length).toBe(1)
                         expect(result[0]).toHaveProperty('_id')
                         done()

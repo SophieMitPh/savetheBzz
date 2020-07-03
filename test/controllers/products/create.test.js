@@ -1,10 +1,4 @@
 const { Product, app, request} =  require ('../../commonJest');
-const { IM_A_TEAPOT, EXPECTATION_FAILED } = require('http-status-codes');
-const { TestScheduler } = require('jest');
-
-/*const id = () => {
-    return (Math.ceil(Math.random() * 1000000)).toString()
-  };*/
 
 let productData
 
@@ -40,7 +34,6 @@ describe('Creates and saves the product', () => {
             .then( res => {
                 Product.find({ name: productData.name})
                     .then(result => {
-                        console.log(result)
                         expect(result.length).toBe(2)
                         expect(result[1]).toHaveProperty('_id')
                         done()

@@ -3,7 +3,6 @@ const httpStatus = require('http-status-codes');
 const jsonWebToken = require('jsonwebtoken');
 const User = require('../models/user');
 
-
 module.exports = {
 	index: (req, res, next) => {
 		User.find()
@@ -174,6 +173,7 @@ module.exports = {
 		}
 		res.json(errorObject);
 	},
+	
 	apiAuthenticate: (req, res, next) => {
 		passport.authenticate('local', (errors, user) => {
 			if (user) {
@@ -184,6 +184,7 @@ module.exports = {
 					},
 					'secret_encoding_passphrase'
 				);
+			//	req.session.token = signedToken
 				res.json({
 					success: true,
 					token: signedToken
@@ -199,7 +200,9 @@ module.exports = {
 	},
 
 	checkAuthSessionOrJwt: (req, res, next) => {
+		if (req.isAuthenticated()){ next();}
 		const token = req.headers.token;
+		console.log(token)
 		if (token) {
 			jsonWebToken.verify(
 				token,
