@@ -89,6 +89,49 @@ module.exports = {
 					next(error);
 				});
 	},
+	editPersonalAccount: (req, res, next) => {
+		let userId = req.params.id;
+		User.findById(userId)
+			.then(user => {
+				res.locals.user = user;
+				res.render('account/accountEdit', {
+					user: user
+				});
+			})
+			.catch(error => {
+				console.log(`Error fetching user by ID: ${error.message}`);
+				next(error);
+			});
+	},
+	updateAccount: (req, res, next) => {
+		let userId = req.params.id;
+		let	userParams = {
+				name: {
+					first: req.body.first,
+					last: req.body.last,
+				},
+				email: req.body.email,
+				password: req.body.password,
+			};
+		User.findByIdAndUpdate(userId, {
+			$set: userParams
+		})
+			.then(user => {
+				res.locals.redirect = `/${userId}/my-account/profile`;
+				res.locals.user = user;
+				next();
+			})
+			.catch(error => {
+				console.log(`Error updating user by ID: ${error.message}`);
+				next(error);
+			});
+	},
+
+	redirectView: (req, res, next) => {
+		let redirectPath = res.locals.redirect;
+		if (redirectPath) res.redirect(redirectPath);
+		else next();
+	},
 
 	getShippingAddress: (req, res) => {
 		let userId = req.params.id;
@@ -104,6 +147,41 @@ module.exports = {
 					next(error);
 				});
 	},
+	editShippingAddress: (req, res) => {
+		let userId = req.params.id;
+			User.findById(userId)
+				.then(user => {
+					res.locals.user = user;
+					res.render('account/addressEdit', {
+						user: user
+					});
+				})
+				.catch(error => {
+					console.log(`Error fetching user by ID: ${error.message}`);
+					next(error);
+				});
+	},
+	updateAddress: (req, res, next) => {
+		let userId = req.params.id;
+		let	userParams = {
+				adress: {
+						country: req.body.country,
+						street: req.body.street
+				}
+			};
+		User.findByIdAndUpdate(userId, {
+			$set: userParams
+		})
+			.then(user => {
+				res.locals.redirect = `/${userId}/my-account/address`;
+				res.locals.user = user;
+				next();
+			})
+			.catch(error => {
+				console.log(`Error updating user by ID: ${error.message}`);
+				next(error);
+			});
+	},
 
 	getPaymentMethods: (req, res) => {
 		let userId = req.params.id;
@@ -116,6 +194,41 @@ module.exports = {
 			})
 			.catch(error => {
 				console.log(`Error fetching user by ID: ${error.message}`);
+				next(error);
+			});
+	},
+	editPaymentMethods: (req, res) => {
+		let userId = req.params.id;
+		User.findById(userId)
+			.then(user => {
+				res.locals.user = user;
+				res.render('account/paymentEdit', {
+					user: user
+				});
+			})
+			.catch(error => {
+				console.log(`Error fetching user by ID: ${error.message}`);
+				next(error);
+			});
+	},
+	updatePayment: (req, res, next) => {
+		let userId = req.params.id;
+		User.findByIdAndUpdate(userId, {
+			$set: 	{
+				payment: {
+					card: req.body.card,
+					holder: req.body.holder
+				}
+			}
+		})
+			.then(user => {
+				console.log(user.payment)
+				res.locals.redirect = `/${userId}/my-account/payment`;
+				res.locals.user = user;
+				next();
+			})
+			.catch(error => {
+				console.log(`Error updating user by ID: ${error.message}`);
 				next(error);
 			});
 	},

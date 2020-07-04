@@ -51,6 +51,13 @@ module.exports = {
 			},
 			email: req.body.email,
 			password: req.body.password,
+			address: {
+					country: req.body.country,
+					street: req.body.street
+			},
+			payment: {
+					card: req.body.card
+			}
 		};
 		let newUser = new User(userParams);
 		User.register(newUser, req.body.password, (e, user) => {

@@ -28,13 +28,15 @@
         </div>
         <div>
             <div class="form-container">
+                <form method="POST" action="<%=`/${user._id}/my-account/profile/update?_method=PUT`%>">
                     <label for="inputDescription">First Name</label>
-                    <p> <%= user.name.first  %></p>
+                    <input type="text" name="first" value="<%=user.name.first %>" placeholder="First" autofocus>
                     <label for="inputDescription">Last Name</label>
-                    <p> <%= user.name.last  %></p>
+                    <input type="text" name="last" value="<%=user.name.last %>" placeholder="Last" autofocus>
                     <label for="inputDescription">Email</label>
-                    <p> <%= user.email  %></p>
-                    <a href="<%=`/${user._id}/my-account/profile/edit` %>"><button id="save-changes-button" type="submit">EDIT</button></a>
+                    <input type="text" name="email" value="<%=user.email %>" placeholder="Email" autofocus>
+                    <button id="save-changes-button" type="submit">SAVE CHANGES</button>
+                </form>
             </div>
         </div>
     </div>
