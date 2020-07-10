@@ -1,30 +1,47 @@
-const {app, Product, request} = require('../../commonJest');
-describe('productController', () => {
-	let productItems;
-	beforeEach(async () => {
-		productItems = await Promise.all([
-			Product.create({name: 'shirt', price: 25, description: '100% cotton T-shirt'}),
-			Product.create({name: 'Silk blouse', price: 60, description: 'Beige silk blouse'}),
-			Product.create({name: 'Leather skirt', price: 59, description: 'faux leather skirt'})   
-		]);
-	});
+const { Product, app, request} =  require ('../../commonJest');
 
-	describe('product list', () => {
-		it('show ok on /products', ((done) => {
-			request(app)
-				.get('/products')
-				.expect(200, done);
-		}));
-		it('show all products in db',  ((done) => {
-			request(app)
-				.get('/products')
-				.then((res) => {
-					const body = res.text;
-					for(const product of productItems){
-						expect(body).toContain(product.name);
-					}
-					done();
-				});
-		}));
-	});
-});
+let productData
+
+describe('Creates and saves the product', () => {
+    beforeEach(() => {
+        productData = {
+            name: 'Black shorts',
+            price: 25,
+            description: 'Shorts made out of bio-cotton.'
+        }
+    })
+
+    it('save the product directly', (done) => {
+        const testProduct = new Product(productData)
+        testProduct.save()
+            .then(() => {
+                Product.find({ name: productData.name })
+                    .then(result => {
+                        expect(result.length).toBe(1)
+                        expect(result[0]).toHaveProperty('_id')
+                        done()
+                    })
+            })
+            .catch((error) => {
+                done(error.message)
+            })
+    })
+
+    it('create product via post request', (done) => {
+        request(app)
+            .post('/products/create')
+            .send(productData)
+            .then( res => {
+                Product.find({ name: productData.name})
+                    .then(result => {
+                        expect(result.length).toBe(2)
+                        expect(result[1]).toHaveProperty('_id')
+                        done()
+                    })
+            })
+            .catch((error) => {
+                done(error.message)
+            })
+    })
+})
+

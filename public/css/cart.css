@@ -34,6 +34,13 @@ body {
     justify-content: center;
 }
 
+.cart-container-empty {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .added-products {
     display: flex;
     flex-direction: column;
@@ -60,25 +67,29 @@ body {
     font-size: 24px;
 }
 
-.productTitle {
-    width: 84px;
-    height: 38px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
+.product {
+    width: 150px;
     line-height: 28px;
-    margin-left: 5px;
+    
+}
+
+.productTitle {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+    padding-top: 2px;
 }
 
 .quantity {
     font-family: Raleway;
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 18px;
     opacity: 0.8;
-    margin-left: 100px;
-    padding-left: 100px;
+    margin-left: 50px;
+    padding-left: 20px;
 }
 
 select {
@@ -94,11 +105,14 @@ select {
 }
 
 .amount {
-    line-height: 80px;
+    line-height: 75px;
     margin-right: 20px;
     margin-left: 0px;
 }
-
+.amount p {
+    font-size: 18px;
+    font-weight: 500;
+}
 .trash {
     margin-right: 30px;
     margin-top: 25px;

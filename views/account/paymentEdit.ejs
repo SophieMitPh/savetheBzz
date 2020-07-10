@@ -28,11 +28,17 @@
         </div>
         <div>
             <div class="form-container">
+                <form method="POST" action="<%=`/${user._id}/my-account/payment/update?_method=PUT`%>">
                     <label for="inputDescription">Card Number</label>
-                    <p><%= user.payment.card  %></p>
+                    <input type="tel" name="card" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required>
+                    <label for="inputDescription">Expiration date</label>
+                    <input type="text" name="expiration" placeholder="mm/yy" required>
                     <label for="inputDescription">Name on card</label>
-                    <p><%= user.payment.holder  %></p>
-                    <a href="<%=`/${user._id}/my-account/payment/edit` %>"><button id="save-changes-button" type="submit">EDIT</button></a>
+                    <input type="text" name="holder" placeholder="NAME LASTNAME" required>
+                    <label for="inputDescription">CVV</label>
+                    <input type="password" placeholder="CVV" maxlength='3' required>
+                    <button id="save-changes-button" type="submit">ADD CARD</button>
+                </form>
             </div>
         </div>
     </div>

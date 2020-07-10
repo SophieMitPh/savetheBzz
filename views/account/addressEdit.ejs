@@ -25,6 +25,7 @@
             google.maps.event.addListener(autocomplete, 'place_changed', function () {
                 var near_place = autocomplete.getPlace();
             });
+            
         });
     </script>
     </head>
@@ -47,12 +48,15 @@
             </div>
             <div>
                 <div class="form-container">
-                    
+                    <form method="POST" action="<%=`/${user._id}/my-account/address/update?_method=PUT`%>">
                         <label for="inputDescription">Country</label>
-                        <p><%= user.address.country  %></p>
+                        <select name="country" class="countries" id="countryId">
+                            <option value="<%= user.address.country %>">Select Country</option>
+                        </select>
                         <label for="inputDescription">Address</label>
-                        <p><%= user.address.street  %></p>
-                        <a href="<%=`/${user._id}/my-account/address/edit` %>"><button id="save-changes-button" type="submit">EDIT</button></a>
+                        <input id="search_input" type="search" name="address" value="<%= user.address.street %>"
+                            placeholder="Address" auto-complete>
+                        <button id="save-changes-button" type="submit">SAVE CHANGES</button>
                     </form>
                 </div>
             </div>

@@ -25,30 +25,6 @@ module.exports = {
 			});
 	},
 
-	/*getSignUp: (req, res) => {
-		res.render('signUp');
-	},*/
-
-	/*showSignUp: (req, res) => {
-		let signUpData = req.body;
-		let newSubscriber = new Subscriber({
-			name: req.body.name,
-			lastname: req.body.lastname,
-			email: req.body.email,
-			password: req.body.password
-		});
-		newSubscriber.save().then(() => {
-			res.render('contact', {
-				name: signUpData.name,
-				lastname: signUpData.lastname,
-				email: signUpData.email,
-				password: signUpData.password
-			});
-		}).catch(error => {
-			res.send(error);
-		});
-	},*/
-
 	index: (req, res, next) => {
 		Subscriber.find()
 			.then(subscribers => {
