@@ -13,11 +13,6 @@ module.exports = {
 		res.render('admin');
 	},
 
-	getProductDetailView: (req, res) => {
-		let paramsName = req.params.product;
-		res.render('products/productDetailView', {product: paramsName});
-	},
-
 	getCartView: (req, res, next) => {
 		if(!req.session.cart){
 			return res.render('cart', {products: null});
