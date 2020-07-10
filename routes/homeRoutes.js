@@ -1,10 +1,10 @@
 const router = require('express').Router(),
 	homeController = require('../controllers/homeController');
-const Cart = require('../models/cart')
-const Wishlist = require('../models/wishlist')
-const Product = require('../models/product');
+
 router.get('/', homeController.getIndexPage);
 router.get('/chat', homeController.chat);
+
+router.get('/admin', homeController.getAdminView);
 
 router.get('/cart', homeController.getCartView);
 router.get('/cart/add/:id', homeController.addProductToCart);
