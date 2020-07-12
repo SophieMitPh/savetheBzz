@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Show renders Product show correctly 1`] = `
+"<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=\\"utf-8\\">
+    <title>Page Not Found</title>
+</head>
+
+<body>
+    <h1>Error. Page not found.</h1>
+</body>
+
+</html>"
+`;
