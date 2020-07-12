@@ -1,28 +1,27 @@
 const httpStatus = require('http-status-codes');
 const User = require('../models/user');
-const Cart = require('../models/cart')
-const Product = require('../models/product')
-const Wishlist = require('../models/wishlist')
+const Cart = require('../models/cart');
+const Product = require('../models/product');
+const Wishlist = require('../models/wishlist');
 
 module.exports = {
 	getIndexPage: (req, res) => {
 		res.render('home');
 	},
 
-	getProductDetailView: (req, res) => {
-		let paramsName = req.params.product;
-		res.render('products/productDetailView', {product: paramsName});
+	getAdminView: (req, res) => {
+		res.render('admin');
 	},
 
 	getCartView: (req, res, next) => {
 		if(!req.session.cart){
-			return res.render('cart', {products: null})
+			return res.render('cart', {products: null});
 		}
-		var cart = new Cart(req.session.cart)
+		var cart = new Cart(req.session.cart);
 		res.render('cart', {
 			products: cart.generateArray(),
 			totalPrice: cart.totalPrice
-		})
+		});
 	},
 
 	addProductToCart: (req, res, next) => {
@@ -51,13 +50,13 @@ module.exports = {
 
 	getWishList: (req, res, next) => {
 		if(!req.session.wishlist){
-			console.log("no products in wishlist")
-			return res.render('wishList', {products: null})
+			console.log('no products in wishlist');
+			return res.render('wishList', {products: null});
 		}
-		var wishlist = new Wishlist(req.session.wishlist)
+		var wishlist = new Wishlist(req.session.wishlist);
 		res.render('wishList', {
 			products: wishlist.generateArray()
-		})
+		});
 	},
 
 	addProductToWishlist: (req, res, next) => {
@@ -76,18 +75,18 @@ module.exports = {
 	},
 
 	getPersonalAccount: (req, res, next) => {
-			let userId = req.params.id;
-			User.findById(userId)
-				.then(user => {
-					res.locals.user = user;
-					res.render('account/account', {
-						user: user
-					});
-				})
-				.catch(error => {
-					console.log(`Error fetching user by ID: ${error.message}`);
-					next(error);
+		let userId = req.params.id;
+		User.findById(userId)
+			.then(user => {
+				res.locals.user = user;
+				res.render('account/account', {
+					user: user
 				});
+			})
+			.catch(error => {
+				console.log(`Error fetching user by ID: ${error.message}`);
+				next(error);
+			});
 	},
 	editPersonalAccount: (req, res, next) => {
 		let userId = req.params.id;
@@ -106,13 +105,13 @@ module.exports = {
 	updateAccount: (req, res, next) => {
 		let userId = req.params.id;
 		let	userParams = {
-				name: {
-					first: req.body.first,
-					last: req.body.last,
-				},
-				email: req.body.email,
-				password: req.body.password,
-			};
+			name: {
+				first: req.body.first,
+				last: req.body.last,
+			},
+			email: req.body.email,
+			password: req.body.password,
+		};
 		User.findByIdAndUpdate(userId, {
 			$set: userParams
 		})
@@ -135,40 +134,40 @@ module.exports = {
 
 	getShippingAddress: (req, res) => {
 		let userId = req.params.id;
-			User.findById(userId)
-				.then(user => {
-					res.locals.user = user;
-					res.render('account/address', {
-						user: user
-					});
-				})
-				.catch(error => {
-					console.log(`Error fetching user by ID: ${error.message}`);
-					next(error);
+		User.findById(userId)
+			.then(user => {
+				res.locals.user = user;
+				res.render('account/address', {
+					user: user
 				});
+			})
+			.catch(error => {
+				console.log(`Error fetching user by ID: ${error.message}`);
+				next(error);
+			});
 	},
 	editShippingAddress: (req, res) => {
 		let userId = req.params.id;
-			User.findById(userId)
-				.then(user => {
-					res.locals.user = user;
-					res.render('account/addressEdit', {
-						user: user
-					});
-				})
-				.catch(error => {
-					console.log(`Error fetching user by ID: ${error.message}`);
-					next(error);
+		User.findById(userId)
+			.then(user => {
+				res.locals.user = user;
+				res.render('account/addressEdit', {
+					user: user
 				});
+			})
+			.catch(error => {
+				console.log(`Error fetching user by ID: ${error.message}`);
+				next(error);
+			});
 	},
 	updateAddress: (req, res, next) => {
 		let userId = req.params.id;
 		let	userParams = {
-				adress: {
-						country: req.body.country,
-						street: req.body.street
-				}
-			};
+			adress: {
+				country: req.body.country,
+				street: req.body.street
+			}
+		};
 		User.findByIdAndUpdate(userId, {
 			$set: userParams
 		})
@@ -222,7 +221,7 @@ module.exports = {
 			}
 		})
 			.then(user => {
-				console.log(user.payment)
+				console.log(user.payment);
 				res.locals.redirect = `/${userId}/my-account/payment`;
 				res.locals.user = user;
 				next();
@@ -255,6 +254,6 @@ module.exports = {
 	},
 
 	chat: (req, res) => {
-		res.render("chat");
+		res.render('chat');
 	}
 };

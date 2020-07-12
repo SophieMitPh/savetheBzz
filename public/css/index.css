@@ -47,4 +47,14 @@ body {
     width:245px;
     height: 60px;
     border-radius: 5px;
-    background-color: #ECEE81 !important;}
+    background-color: #ECEE81 !important;
+}
+
+.admin-button {
+    color: black;
+    margin: 10px;
+    width:220px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #8c8c8c;
+}

@@ -243,6 +243,22 @@ thead tr {
     font-size: 16px;
 }
 
+.button-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.w3-button {
+    width:245px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #ECEE81 !important;
+}
+
 #chat {
     width: 95%;
     height: 70%;
