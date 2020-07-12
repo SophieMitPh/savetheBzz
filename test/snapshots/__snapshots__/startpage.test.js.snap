@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders home correctly 1`] = `
-"<link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/css/layout.css\\">
+"
 <link href=\\"//fonts.googleapis.com/css2?family=Raleway\\" rel=\\"stylesheet\\">
 <link rel=\\"stylesheet\\" href=\\"/css/bootstrap.css\\">
+<link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/css/layout.css\\">
+<link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/css/footer.css\\">
 <script type=\\"text/javascript\\" src=\\"/js/jquery.min.js\\"></script>
 <script type=\\"text/javascript\\" src=\\"/js/bootstrap.min.js\\"></script>
 <script type=\\"text/javascript\\" src=\\"/js/bzzApp.js\\"></script>
@@ -18,7 +20,6 @@ exports[`renders home correctly 1`] = `
         <div class=\\"logos\\">
             <div class=\\"login\\">
                 
-                <a href=\\"/users/login\\">Log In</a>
                 <a href=\\"/users/login\\"><img id=\\"account\\" src=\\"/images/account.png\\" /></a>
                 
             </div>
@@ -47,7 +48,6 @@ exports[`renders home correctly 1`] = `
     </div>
     
     </div>
-   
     <!DOCTYPE html>
 <html>
 
@@ -69,16 +69,16 @@ exports[`renders home correctly 1`] = `
             <a href=\\"products/productOverview\\"><button class=\\"w3-button\\">Our products</button></a>
         </div>
         <div class=\\"button-style\\">
-            <a href=\\"products/new\\"><button class=\\"w3-button\\">Add product!</button></a>
+            <a href=\\"subscribers/new\\"><button class=\\"w3-button\\">Subscribe to our newsletter!</button></a>
         </div>
         <div class=\\"button-style\\">
-            <a href=\\"subscribers/new\\"><button class=\\"w3-button\\">Subscribe to our newsletter!</button></a>
+            <a href=\\"admin\\"><button class=\\"admin-button\\">Admin section</button></a>
         </div>
     </div>
 </body>
 </html>
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/css/footer.css\\">
-<footer class=\\"footer\\">
+<div class=\\"footer-bottom\\">
     <div class=\\"footer-container\\">
         <div>
             <p><a class=\\"footer-link\\" href=\\"/users/new\\">Sign Up</a></p>
@@ -95,6 +95,6 @@ exports[`renders home correctly 1`] = `
             <p><a class=\\"footer-link\\" href=\\"/wishlist\\">Your wishlist</a></p>
         </div>
     </div>
-</footer>
+</div>
 </body>"
 `;
